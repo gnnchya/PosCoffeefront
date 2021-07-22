@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom";
 
 function Page1(){
     return(
@@ -17,7 +18,7 @@ function Page1(){
             {/*</form>*/}
             <a href="http://google.com"><div className="v6_14">MENU</div></a>
 
-
+            <Link to="/order">ORDER</Link>
             <button className="v6_15">ORDER</button>
             <button className="v6_19">MONEY</button>
             <button className="v6_20">STOCK</button>
