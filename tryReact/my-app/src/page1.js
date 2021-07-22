@@ -1,6 +1,6 @@
 import React from "react"
 
-function Header(){
+function Page1(){
     return(
         <div className="v1_3">
             <div className="v6_3"></div>
@@ -34,4 +34,4 @@ function Header(){
     )
 }
 
-export default Header
+export default Page1
