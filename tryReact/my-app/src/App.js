@@ -9,6 +9,7 @@ import {
 } from "react-router-dom"; import Page2 from "./page2";
 import HomePage from './pages/homePage';
 import ShowMenu from './pages/showMenu';
+import MenuInfo from './pages/menuInfo';
 
 function App() {
     return (
@@ -22,6 +23,9 @@ function App() {
                 </Route>
                 <Route exact path="/showMenu">
                     <ShowMenu />
+                </Route>
+                <Route exact path="/menuInfo">
+                    <MenuInfo />
                 </Route>
             </Switch>
         </Router>
