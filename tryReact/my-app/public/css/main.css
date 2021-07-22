@@ -6,7 +6,7 @@ body {
 }
 .v1_3 {
   width: 100%;
-  height: 900px;
+  height: 870px;
   background: rgba(255,255,255,1);
   opacity: 1;
   position: relative;
@@ -16,10 +16,10 @@ body {
 }
 .v6_3 {
   width: 184px;
-  height: 900px;
+  height: 100%;
   background: rgba(196,196,196,1);
   opacity: 1;
-  position: relative;
+  position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
@@ -29,9 +29,8 @@ body {
   height: 99px;
   background: rgba(245,201,88,1);
   opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
+  position: absolute;
+  top:0px;
   overflow: hidden;
 }
 .name {
@@ -51,7 +50,7 @@ body {
   border-bottom-right-radius: 10px;
   overflow: hidden;
   top: 23px;
-  left: 1135px;
+  right: 250px
 }
 
 .v6_10 span {
@@ -101,7 +100,7 @@ body {
   opacity: 1;
   position: absolute;
   top: 10px;
-  left: 1296px;
+  right: 100px;
   border-top-left-radius: 368px;
   border-top-right-radius: 368px;
   border-bottom-left-radius: 368px;
@@ -121,17 +120,24 @@ body {
   text-align: center;
 }
 .v6_14 {
-  width: 98px;
+  width: 163px;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 160px;
-  left: 13px;
+  left: 10px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
-  text-align: center;
+  text-align: left;
+  padding-left: 20px;
 }
+
+.v6_14:hover {
+  background-color: rgba(245,201,88,1);
+  color: white;
+}
+
 .v6_31 {
   width: 98px;
   color: rgba(0,0,0,1);
@@ -145,41 +151,63 @@ body {
   text-align: center;
 }
 .v6_15 {
-  width: 105px;
+  width: 163px;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 204px;
-  left: 13px;
+  left: 10px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
-  text-align: center;
+  text-align: left;
+  padding-left: 20px;
 }
+
+.v6_15:hover {
+  background-color: rgba(245,201,88,1);
+  color: white;
+}
+
 .v6_19 {
-  width: 110px;
+  width: 163px;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 249px;
-  left: 13px;
+  left: 10px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
-  text-align: center;
+  text-align: left;
+  padding-left: 20px;
 }
+
+.v6_19:hover {
+  background-color: rgba(245,201,88,1);
+  color: white;
+}
+
 .v6_20 {
-  width: 93px;
+  width: 163px;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 293px;
-  left: 18px;
+  left: 10px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
-  text-align: center;
+  text-align: left;
+  padding-left: 20px;
 }
+
+.v6_20:hover {
+  background-color: rgba(245,201,88,1);
+  color: white;
+}
+
+
 .v6_16 {
   width: 84px;
   color: rgba(97,93,93,1);
@@ -193,37 +221,51 @@ body {
   text-align: center;
 }
 .v6_17 {
-  width: 119px;
+  width: 163px;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 509px;
-  left: 13px;
+  left: 10px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
-  text-align: center;
+  text-align: left;
+  padding-left: 20px;
 }
+
+.v6_17:hover {
+  background-color: rgba(245,201,88,1);
+  color: white;
+}
+
 .v6_18 {
-  width: 126px;
+  width: 163px;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 553px;
-  left: 13px;
+  left: 10px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
-  text-align: center;
+  text-align: left;
+  padding-left: 20px;
 }
+
+.v6_18:hover {
+  background-color: rgba(245,201,88,1);
+  color: white;
+}
+
 .v6_25 {
   width: 143px;
-  height: 74px;
+  height: 60px;
   background: rgba(0,0,0,0);
   border: none;
   opacity: 1;
   position: absolute;
-  top: 826px;
+  bottom:10px;
   left: 20px;
 }
 
@@ -262,8 +304,8 @@ body {
   width: 504px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 438px;
-  left: 548px;
+  top: 50%;
+  left: 40%;
   font-family: Marvel;
   font-weight: Regular;
   font-size: 80px;
@@ -271,7 +313,7 @@ body {
   text-align: center;
 }
 .v6_32 {
-  width: 193px;
+  width: 250x;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 24px;

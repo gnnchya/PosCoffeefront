@@ -6,7 +6,6 @@ function HomePage(){
         <div className="v1_3">
             <div className="v6_3"></div>
             <div className="v6_2"></div>
-            <div className="name"></div>
             <Link to="/showCart"><div className="v6_10">
                 <span className="v6_8">cart</span>
             </div></Link>
