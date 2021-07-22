@@ -219,10 +219,6 @@
   .v6_25 {
     width: 143px;
     height: 74px;
-    background: url("../images/v6_25.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     opacity: 1;
     position: absolute;
     top: 826px;

@@ -8,7 +8,6 @@ function Page1(){
             <div className="v6_2"></div>
             <div className="name"></div>
             <button className="v6_10">
-                <div className="v6_9"></div>
                 <span className="v6_8">cart</span>
             </button>
             <div className="v6_12"></div>
