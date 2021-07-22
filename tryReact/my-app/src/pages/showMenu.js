@@ -27,7 +27,6 @@ function ShowMenu() {
                 <div className="v6_22"></div>
                 <span className="v6_23">LOG OUT</span>
             </span>
-            <span className="v6_26">WELCOME</span>
             <Link to="/homepage"></Link><span className="v6_32">POS COFFEE</span>
 
             <div class="v6_72"></div><span class="v6_71">1 2 3 4 5 6 7</span>
