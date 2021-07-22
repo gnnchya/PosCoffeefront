@@ -1,5 +1,4 @@
 import './App.css';
-import Page1 from "./page1";
 import {
     BrowserRouter as Router,
     Switch,
@@ -7,37 +6,23 @@ import {
     Link,
     useRouteMatch,
     useParams
-} from "react-router-dom";import Page2 from "./page2";
+} from "react-router-dom"; import Page2 from "./page2";
+import HomePage from './pages/homePage';
+import ShowMenu from './pages/showMenu';
 
 function App() {
-  return (
-    <Router>
-        <div>
-            <li>
-                <Link to="/read">Page1</Link>
-            </li>
-            <li>
-                <Link to="/about">Page2</Link>
-            </li>
+    return (
+        <Router>
             <Switch>
-                <Route exact path="/read">
-                    <Page1 />
+                <Route exact path="/homepage">
+                    <HomePage />
                 </Route>
-                <Route exact path="/about">
-                    <About />
+                <Route exact path="/showMenu">
+                    <ShowMenu />
                 </Route>
             </Switch>
-        </div>
-    </Router>
-  )
-}
-
-function Home() {
-    return <h2>Home</h2>;
-}
-
-function About() {
-    return <h2>About</h2>;
+        </Router>
+    )
 }
 
 export default App;
