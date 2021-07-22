@@ -6,13 +6,14 @@ body {
 }
 .v1_3 {
   width: 100%;
-  height: 870px;
+  height: 100%;
   background: rgba(255,255,255,1);
   opacity: 1;
   position: relative;
   top: 0px;
   left: 0px;
   overflow: hidden;
+  margin:0px;
 }
 .v6_3 {
   width: 184px;
@@ -279,7 +280,7 @@ body {
   height: 57px;
   background: rgba(0,0,0,1);
   opacity: 1;
-  position: absolute;
+  position: relative;
   top: 0px;
   left: 0px;
   border-top-left-radius: 10px;

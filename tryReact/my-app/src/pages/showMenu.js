@@ -6,7 +6,6 @@ function ShowMenu() {
         <div className="v1_3">
             <div className="v6_3"></div>
             <div className="v6_2"></div>
-            <div className="name"></div>
             <Link to="/showCart"><div className="v6_10">
                 <div className="v6_9"></div>
                 <span className="v6_8">cart</span>
@@ -29,7 +28,11 @@ function ShowMenu() {
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
 
-            <div class="v6_72"></div><span class="v6_71">1 2 3 4 5 6 7</span>
+            <div class="pagination">
+                <a href="#">❮</a>
+                <a href="#">❯</a>
+            </div>
+
             <Link to="/menuInfo"><div class="v12_301">
                 <div class="v6_167"></div>
                 <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>

@@ -385,17 +385,38 @@
     border-bottom-right-radius: 10px;
     overflow: hidden;
   }
-  .v6_71 {
-    width: 449px;
-    color: rgba(0,0,0,1);
+
+
+  .pagination {
+    width: 95px;
+    color: black;
+    background: rgba(228,228,228,1);
     position: absolute;
-    top: 818px;
-    left: 964px;
+    bottom: 5%;
+    right: 7.5%;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
     opacity: 1;
     text-align: center;
+    display: inline-block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
   }
   .v12_301 {
     width: 282px;
@@ -407,7 +428,7 @@
     opacity: 1;
     position: absolute;
     top: 179px;
-    left: 224px;
+    left: 15.5%;
     overflow: hidden;
   }
   .v6_73 {
@@ -514,7 +535,7 @@
     opacity: 1;
     position: absolute;
     top: 179px;
-    left: 1121px;
+    left: 77.7%;
     overflow: hidden;
   }
   .v6_97 {
@@ -621,7 +642,7 @@
     opacity: 1;
     position: absolute;
     top: 179px;
-    left: 523px;
+    left: 36.3%;
     overflow: hidden;
   }
   .v6_85 {
@@ -681,7 +702,7 @@
     opacity: 1;
     position: absolute;
     top: 179px;
-    left: 822px;
+    left: 57%;
     overflow: hidden;
   }
   .v6_89 {
@@ -741,7 +762,7 @@
     opacity: 1;
     position: absolute;
     top: 367px;
-    left: 224px;
+    left: 15.5%;
     overflow: hidden;
   }
   .v6_123 {
@@ -848,7 +869,7 @@
     opacity: 1;
     position: absolute;
     top: 367px;
-    left: 1121px;
+    left: 77.7%;
     overflow: hidden;
   }
   .v6_131 {
@@ -955,7 +976,7 @@
     opacity: 1;
     position: absolute;
     top: 367px;
-    left: 523px;
+    left: 36.3%;
     overflow: hidden;
   }
   .v6_139 {
@@ -1015,7 +1036,7 @@
     opacity: 1;
     position: absolute;
     top: 367px;
-    left: 822px;
+    left: 57%;
     overflow: hidden;
   }
   .v6_143 {
@@ -1075,7 +1096,7 @@
     opacity: 1;
     position: absolute;
     top: 553px;
-    left: 224px;
+    left: 15.5%;
     overflow: hidden;
   }
   .v6_147 {
@@ -1182,7 +1203,7 @@
     opacity: 1;
     position: absolute;
     top: 553px;
-    left: 1121px;
+    left: 77.7%;
     overflow: hidden;
   }
   .v6_155 {
@@ -1289,7 +1310,7 @@
     opacity: 1;
     position: absolute;
     top: 553px;
-    left: 523px;
+    left: 36.3%;
     overflow: hidden;
   }
   .v6_163 {
@@ -1349,7 +1370,7 @@
     opacity: 1;
     position: absolute;
     top: 553px;
-    left: 822px;
+    left: 57%;
     overflow: hidden;
   }
   .v6_167 {

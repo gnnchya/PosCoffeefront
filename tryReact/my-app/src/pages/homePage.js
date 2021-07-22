@@ -26,7 +26,7 @@ function HomePage(){
                 <span className="v6_23">LOG OUT</span>
             </span>
             <span className="v6_26">WELCOME</span>
-            <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
+            <Link to="/homepage"></Link><span className="v6_32">POS COFFEE</span>
         </div>
     )
 }
