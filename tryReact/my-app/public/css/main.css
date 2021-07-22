@@ -84,6 +84,7 @@ body {
   color: rgba(255,255,255,1);
   position: absolute;
   bottom: 7px;
+  left: 20px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 50px;
@@ -224,8 +225,13 @@ body {
   position: absolute;
   top: 826px;
   left: 20px;
-  /* overflow: hidden; */
 }
+
+.v6_25:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
 .v6_22 {
   width: 143px;
   height: 57px;
