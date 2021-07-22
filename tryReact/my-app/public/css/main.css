@@ -38,38 +38,52 @@ body {
   color: #fff;
 }
 .v6_10 {
-  width: 134px;
-  height: 59px;
-  background: url("../images/v6_10.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 23px;
-  left: 1135px;
-  overflow: hidden;
-}
-.v6_9 {
+  border: none;
+
   width: 134px;
   height: 53px;
   background: rgba(0,0,0,1);
   opacity: 1;
   position: absolute;
-  top: 5px;
-  left: 0px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
+  top: 23px;
+  left: 1135px;
 }
+
+.v6_10 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.v6_10 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.v6_10:hover span {
+  padding-right: 25px;
+}
+
+.v6_10:hover span:after {
+  opacity: 1;
+  right: 0.5;
+}
+
 .v6_8 {
   width: 88px;
   color: rgba(255,255,255,1);
   position: absolute;
-  top: 0px;
-  left: 21px;
+  bottom: 7px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 50px;
@@ -204,15 +218,13 @@ body {
 .v6_25 {
   width: 143px;
   height: 74px;
-  background: url("../images/v6_25.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background: rgba(0,0,0,0);
+  border: none;
   opacity: 1;
   position: absolute;
   top: 826px;
   left: 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .v6_22 {
   width: 143px;
