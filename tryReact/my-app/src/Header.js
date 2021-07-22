@@ -15,7 +15,7 @@ function Header(){
             {/*<form action="https://google.com">*/}
             {/*    <input type="submit" value="Go to Google" />*/}
             {/*</form>*/}
-            <a href="http://google.com" className="v6_14">MENU</a>
+            <a href="http://google.com"><div className="v6_14">MENU</div></a>
 
 
             <button className="v6_15">ORDER</button>
