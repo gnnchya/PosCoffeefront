@@ -58,8 +58,6 @@ function createMenu() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"></Link><span className="v6_32">POS COFFEE</span>
-            <div className="v6_192">
-                <div className="v6_193"></div><span className="v6_194">Create Menu</span></div>
             <form>
             {/* <label> */}
             <span className="v6_276">Name : </span>
@@ -97,7 +95,9 @@ function createMenu() {
                 <div className="name"></div>
                 <div className="name"></div>
             </div>
-            <button onClick={addClick}>Add</button>
+            <button class="v6_192" onClick={addClick}>  
+                {/* <div className="v6_193"></div>*/<span className="v6_194">Create Menu</span> }
+            </button>
             </form>
         </div>
     )

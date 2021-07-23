@@ -252,8 +252,10 @@
   }
   .v6_192 {
     width: 259px;
-    height: 66px;
-    background: url("../images/v6_192.png");
+    height: 57px;
+    background: rgba(245,201,88,1);
+    border:none;
+    border-radius: 10px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -263,20 +265,12 @@
     left: 263px;
     overflow: hidden;
   }
-  .v6_193 {
-    width: 259px;
-    height: 57px;
-    background: rgba(245,201,88,1);
-    opacity: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
+
+  .v6_192:hover {
+    background-color: black;
+    transition: 0.5s;
   }
+
   .v6_194 {
     width: 244px;
     color: rgba(255,255,255,1);
