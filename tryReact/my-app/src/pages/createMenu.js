@@ -12,13 +12,14 @@ function createMenu() {
         getList()
       }, [])
     
-      const getList = async () => {
+    const getList = async (e) => {
         try {
-          const response = await getMenu()
-    
-          if (response.status === 200) {
-            setPosts(response.data)
-          }
+            const response = await getMenu()
+            console.log(response.data)
+            alert(response.data.data[0])
+            if (response.status === 200) {
+                setPosts(response.data)
+            }
         } catch (error) {
           alert(error)
         }
@@ -135,6 +136,7 @@ function createMenu() {
             <button className="v6_192" onClick={addClick}>  
                 {<span className="v6_194">Create Menu</span> }
             </button>
+
             </form>
         </div>
     )
