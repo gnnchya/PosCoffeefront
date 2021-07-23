@@ -13,6 +13,7 @@ function TestAxios() {
 
 
     axios.get("http://127.0.0.1:8080/pos/menu/c3e2obiciaeng9b27p3g").then(res => {
+        alert(res.data.data.id);
         console.log(res.data.data);
         console.log(res.data.data.id);
 
@@ -28,6 +29,8 @@ function TestAxios() {
         return(
             <div>
                 <h2 id="id"></h2>
+                <h2 id="name"></h2>
+
             </div>
         )
         }
