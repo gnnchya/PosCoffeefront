@@ -26,7 +26,6 @@ function MenuInfo(){
                 <div className="v6_22"></div>
                 <span className="v6_23">LOG OUT</span>
             </span>
-            <span className="v6_26">WELCOME</span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
             <div class="v12_338">
             
