@@ -5,7 +5,6 @@ import {createPost, getMenu } from '../actions/posts'
 export default CreateMenu
 
 function CreateMenu() {
-    
     const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState({})
     useEffect(() => {
@@ -74,6 +73,36 @@ function CreateMenu() {
 
     return(
         <div className="v1_3">
+
+<form className="form">
+            <span className="v6_276">Name : </span>
+                <input className="v6_277" type='text' name='name' /*onChange={handleChangeInput} *//>
+                <span className="v6_278">Category :</span>
+
+            <div className="category" id="category1">
+                <input className="v6_279" type='text' name='category' /*onChange={handleChangeInput}*/ />
+                <button className="v6_295" onclick={addCategory()}></button>
+            </div>
+
+            <div className="ingredient">
+                <span className="v6_281">Ingredient :</span>
+                <span className="v6_283">Name :</span>
+                <button className="v6_296" onclick={addIngredient()}> </button>
+                <input className="v6_282" type='text' name='ingredient_name' /*onChange={handleChangeInput}*/ />
+                <span className="v6_284">Amount :</span>
+                <input className="v6_285" type='number' name='amount' /*onChange={handleChangeInput}*/ />
+            </div>
+
+            <span className="v6_286">Price :</span>
+                <input className="v6_287" type='number' name='price' /*onChange={handleChangeInput}*/ required="true"/>
+            <span className="v6_288">Available :</span>
+                <input className="v6_289" type='checkbox' name='available' /*onChange={handleChangeInput}*/ />
+            <button className="v6_192" onClick={addClick}>  
+                {<span className="v6_194">Create Menu</span> }
+            </button>
+
+            </form >
+
             <div className="v6_3"></div>
             <div className="v6_2"></div>
             
@@ -97,50 +126,54 @@ function CreateMenu() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
-            <form>
-            <label>
-            <span className="v6_276">Name : </span>
-                <input className="v6_277" type='text' name='name' onChange={handleChangeInput} />
-            </label>
-            {/* <label> */}
-            <span className="v6_278">Category :</span>
-                <input className="v6_279" type='text' name='category' onChange={handleChangeInput} />
-            {/* </label> */}
-            <span className="v6_281">Ingredient :</span>
-            {/* <label> */}
-            <span className="v6_283">Name :</span>
-                <input className="v6_282" type='text' name='ingredient_name' onChange={handleChangeInput} />
-            {/* </label> */}
-            {/* <label> */}
-            <span className="v6_284">Amount :</span>
-                <input className="v6_285" type='number' name='amount' onChange={handleChangeInput} />
-            {/* </label> */}
-            {/* <label> */}
-            <span className="v6_286">Price :</span>
-                <input className="v6_287" type='number' name='price' onChange={handleChangeInput} />
-            {/* </label> */}
-            {/* <label> */}
-            <span className="v6_288">Available :</span>
-                <input className="v6_289" type='checkbox' name='available' onChange={handleChangeInput} />
-            {/* </label> */}
-            <div className="v6_295">
-            </div>
-            <div className="v6_296">
-            </div>
-            <button className="v6_192" onClick={addClick}>  
-                {<span className="v6_194">Create Menu</span> }
-            </button>
-
-            </form>
-            <button className="test1" onClick={getList}>  
+           
+            {/* <button className="test1" onClick={getList}>  
                 {<span className="test2">GET list</span> }
             </button>
-            {menuItem.map((item, index) => {
-                return(
-                    <h2 key={index} className="test3">{item.id}</h2>
-                )
-            })}
+            <div className="testok">
+                {menuItem.map((item, index) => {
+                    return(
+                        <h2 key={index} className="test3">{item.id}</h2>
+                    )
+                })}    
+            </div> */}
         </div>
     )
+}
+
+function addCategory(handleChangeInput) {
+    try{
+    var ele = document.createElement("input");
+    ele.setAttribute("type", "text")
+    ele.setAttribute("class", "v6_279")
+    ele.setAttribute("name", "category")
+    ele.setAttribute("onchange", {handleChangeInput})
+
+
+
+    document.getElementById("category1").appendChild(ele);
+    }catch (error){}
+}
+
+function addIngredient(handleChangeInput) {
+    try{
+    var name = document.createElement("input");
+    var amount = document.createElement("input");
+
+    name.setAttribute("type", "text")
+    amount.setAttribute("type", "number")
+
+    name.setAttribute("class", "v6_282")
+    amount.setAttribute("class", "v6_285")
+
+    name.setAttribute("name", "ingredient_name")
+    amount.setAttribute("name", "amount")
+
+    name.setAttribute("onchange", {handleChangeInput})
+    amount.setAttribute("onchange", {handleChangeInput})
+
+    document.getElementById("ingredient").appendChild(name);
+    document.getElementById("ingredient").appendChild(amount);
+    }catch (error){}
 }
 

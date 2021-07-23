@@ -260,9 +260,9 @@
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    position: absolute;
-    top: 531px;
-    left: 263px;
+    position: relative;
+    top: 320px;
+    left: -100px;
     overflow: hidden;
   }
 
@@ -328,9 +328,9 @@
     overflow: hidden;
   }
   .v6_278 {
-    width: 113px;
+    width: 20px;
     color: rgba(0,0,0,1);
-    position: absolute;
+    position: relative;
     top: 222px;
     left: 280px;
     font-family: Marvel;
@@ -350,21 +350,22 @@
     border:none;
     background: rgba(228,228,228,1);
     opacity: 1;
-    position: absolute;
-    top: 222px;
-    left: 394px;
+    position: relative;
+    top: 0;
+    left: 113px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
+    margin-top: 10px;
   }
   .v6_281 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: absolute;
-    top: 280px;
-    left: 280px;
+    position: relative;
+    top: 2px;
+    left: 0px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -374,9 +375,9 @@
   .v6_283 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: absolute;
-    top: 280px;
-    left: 453px;
+    position: relative;
+    top: 2px;
+    left: 40px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -394,9 +395,9 @@
     border:none;
     background: rgba(228,228,228,1);
     opacity: 1;
-    position: absolute;
-    top: 280px;
-    left: 533px;
+    position: relative;
+    top: 3px;
+    left: 8px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -406,9 +407,9 @@
   .v6_284 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: absolute;
-    top: 280px;
-    left: 877px;
+    position: relative;
+    top: 2px;
+    left: 30px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -426,9 +427,9 @@
     border:none;
     background: rgba(228,228,228,1);
     opacity: 1;
-    position: absolute;
-    top: 280px;
-    left: 982px;
+    position: relative;
+    top: 3px;
+    left: 40px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -438,8 +439,8 @@
   .v6_286 {
     width: 80px;
     color: rgba(0,0,0,1);
-    position: absolute;
-    top: 338px;
+    position: relative;
+    top: 200px;
     left: 278px;
     font-family: Marvel;
     font-weight: Bold;
@@ -458,9 +459,9 @@
     border:none;
     background: rgba(228,228,228,1);
     opacity: 1;
-    position: absolute;
-    top: 338px;
-    left: 358px;
+    position: relative;
+    top: 200px;
+    left: 290px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -470,9 +471,9 @@
   .v6_288 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: absolute;
-    top: 396px;
-    left: 278px;
+    position: relative;
+    top: 255px;
+    left: 45px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -484,9 +485,9 @@
     height: 30px;
     background: rgba(228,228,228,1);
     opacity: 1;
-    position: absolute;
-    top: 399px;
-    left: 394px;
+    position: relative;
+    top: 264px;
+    left: 60px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -496,14 +497,15 @@
   .v6_295 {
     width: 41px;
     height: 41px;
+    border:none;
     background : url("../images/add_button.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    position: absolute;
-    top: 223px;
-    left: 871px;
+    position: relative;
+    top: 10px;
+    left: 130px;
     overflow: hidden;
     border-radius: 50%;
   }
@@ -516,14 +518,16 @@
   .v6_296 {
     width: 41px;
     height: 41px;
+    border:none;
+
     background: url("../images/add_button.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    position: absolute;
-    top: 281px;
-    left: 1129px;
+    position: relative;
+    top: 12px;
+    left: 648px;
     overflow: hidden;
     border-radius: 50%;
   }
@@ -568,6 +572,21 @@
     height: 30px;
     background: rgba(228,228,228,1);
     opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+  }
+
+  .testok{
+    width: 500px;
+    height: 200px;
+    background: rgba(228,228,228,1);
+    opacity: 1;
     position: absolute;
     top: 700px;
     left: 394px;
@@ -576,4 +595,38 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
+  }
+
+  .form{
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    margin:0px;
+  }
+
+  .category{
+    width: 700px;
+    min-height: 45px;
+    opacity: 1;
+    position: relative;
+    top: 177px;
+    left: 280px;
+    overflow: hidden;
+    margin:0px;
+  }
+
+  .ingredient{
+    width: 1000px;
+    min-height: 55px;
+    opacity: 1;
+    position: relative;
+    top: 180px;
+    left:280px;
+    overflow: hidden;
+    margin:0px;
   }
