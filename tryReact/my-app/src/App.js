@@ -10,6 +10,7 @@ import {
 import HomePage from './pages/homePage';
 import ShowMenu from './pages/showMenu';
 import MenuInfo from './pages/menuInfo';
+import ShowCart from './pages/showCart';
 
 function App() {
     return (
@@ -26,6 +27,9 @@ function App() {
                 </Route>
                 <Route exact path="/menuInfo">
                     <MenuInfo />
+                </Route>
+                <Route exact path="/showCart">
+                    <ShowCart />
                 </Route>
             </Switch>
         </Router>
