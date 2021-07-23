@@ -6,14 +6,20 @@ import {
     Link,
     useRouteMatch,
     useParams
-} from "react-router-dom"; import Page2 from "./page2";
+} from "react-router-dom"; 
+import Page2 from "./page2";
 import HomePage from './pages/homePage';
 import ShowMenu from './pages/showMenu';
 import MenuInfo from './pages/menuInfo';
 import ShowCart from './pages/showCart';
 
+import CreateMenu from './pages/createMenu'
+import React, { Component }  from 'react';
+
+
 function App() {
     return (
+
         <Router>
             <Switch>
                 <Route exact path="/">
