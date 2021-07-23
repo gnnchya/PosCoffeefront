@@ -14,33 +14,34 @@ import MenuInfo from './pages/menuInfo';
 import ShowCart from './pages/showCart';
 import CreateMenu from './pages/createMenu'
 import React, { Component }  from 'react';
+import TestAxios from './pages/testAxios';
 
 
 function App() {
     return (
-
-        <Router>
-            <Switch>
-                <Route exact path="/">
-                    <HomePage />
-                </Route>
-                <Route exact path="/homepage">
-                    <HomePage />
-                </Route>
-                <Route exact path="/showMenu">
-                    <ShowMenu />
-                </Route>
-                <Route exact path="/menuInfo">
-                    <MenuInfo />
-                </Route>
-                <Route exact path="/showCart">
-                    <ShowCart />
-                </Route>
-                <Route exact path="/createMenu">
-                    <CreateMenu />
-                </Route>
-            </Switch>
-        </Router>
+        <TestAxios></TestAxios>
+        // <Router>
+        //     <Switch>
+        //         <Route exact path="/">
+        //             <HomePage />
+        //         </Route>
+        //         <Route exact path="/homepage">
+        //             <HomePage />
+        //         </Route>
+        //         <Route exact path="/showMenu">
+        //             <ShowMenu />
+        //         </Route>
+        //         <Route exact path="/menuInfo">
+        //             <MenuInfo />
+        //         </Route>
+        //         <Route exact path="/showCart">
+        //             <ShowCart />
+        //         </Route>
+        //         <Route exact path="/createMenu">
+        //             <CreateMenu />
+        //         </Route>
+        //     </Switch>
+        // </Router>
     )
 }
 
