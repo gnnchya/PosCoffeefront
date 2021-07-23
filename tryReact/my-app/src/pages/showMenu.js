@@ -27,12 +27,14 @@ function ShowMenu() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
-
+            <Link to="/createMenu"><div class="v6_62">
+                <div class="v6_60"></div><span class="v6_61">Create Menu</span>
+            </div></Link>
             <div class="pagination">
                 <a href="#">❮</a>
                 <a href="#">❯</a>
             </div>
-
+            <div class="v6_72"></div><span class="v6_71">1 2 3 4 5 6 7</span>
             <Link to="/menuInfo"><div class="v12_301">
                 <div class="v6_167"></div>
                 <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
