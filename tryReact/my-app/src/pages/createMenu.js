@@ -137,7 +137,6 @@ function CreateMenu() {
                 {<span className="v6_194">Create Menu</span> }
             </button>
 
-
             </form>
             <button className="test1" onClick={getList}>  
                 {<span className="test2">GET list</span> }
