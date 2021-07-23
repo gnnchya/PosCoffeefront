@@ -24,7 +24,7 @@ function TestAxios() {
         getPrice.innerHTML = res.data.data.getPrice;
         getAvailable.innerHTML = res.data.data.avalable;
     });
-    
+
 
         return(
             <div>

@@ -15,10 +15,10 @@ function CreateMenu() {
     const getList = async (e) => {
         try {
             const response = await getMenu()
-            console.log(response.data)
-            alert(response.data.data[0])
+            console.log(response.data.data)
+            // alert(response.data.data[0])
             if (response.status === 200) {
-                setMenuItems(response.data || [])
+                setMenuItems(response.data.data || [])
             }
         } catch (error) {
           alert(error)
@@ -141,6 +141,12 @@ function CreateMenu() {
             <button className="test1" onClick={getList}>  
                 {<span className="test2">GET list</span> }
             </button>
+            {menuItem.map((item, index) => {
+                return(
+                    <h2 key={index} className="test3">{item.id}</h2>
+                )
+            })}
         </div>
     )
 }
+

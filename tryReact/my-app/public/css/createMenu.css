@@ -579,3 +579,19 @@
     opacity: 1;
     text-align: center;
   }
+
+
+  .test3 {
+    width: 30px;
+    height: 30px;
+    background: rgba(228,228,228,1);
+    opacity: 1;
+    position: absolute;
+    top: 700px;
+    left: 394px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+  }
