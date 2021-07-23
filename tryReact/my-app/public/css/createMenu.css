@@ -552,3 +552,30 @@
     color: #fff;
   }
   
+  .test1 {
+    width: 285px;
+    height: 57px;
+    background: rgba(245,201,88,1);
+    border:none;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 600px;
+    left: 263px;
+    overflow: hidden;
+  }
+  .test2 {
+    width: 247px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    font-family: Marvel;
+    font-weight: Bold;
+    font-size: 30px;
+    opacity: 1;
+    text-align: center;
+  }

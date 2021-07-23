@@ -6,7 +6,7 @@ export default CreateMenu
 
 function CreateMenu() {
     
-    const [posts, setPosts] = useState([])
+    const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState({})
     useEffect(() => {
         getList()
@@ -18,7 +18,7 @@ function CreateMenu() {
             console.log(response.data)
             alert(response.data.data[0])
             if (response.status === 200) {
-                setPosts(response.data)
+                setMenuItems(response.data || [])
             }
         } catch (error) {
           alert(error)
@@ -137,7 +137,11 @@ function CreateMenu() {
                 {<span className="v6_194">Create Menu</span> }
             </button>
 
+
             </form>
+            <button className="test1" onClick={getList}>  
+                {<span className="test2">GET list</span> }
+            </button>
         </div>
     )
 }
