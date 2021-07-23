@@ -7,8 +7,11 @@ export default createMenu
 function createMenu() {
     const handleChangeInput = (e) => {
         const name = e.target.name
-        const value = e.target.value
         const category = e.target.category
+        const ingredient_name = e.target.ingredient_name
+        const amount = e.target.amount
+        const price = e.target.price
+        const available = e.target.available
 
         // if (name === 'title') {
         //     setTitle(value)
