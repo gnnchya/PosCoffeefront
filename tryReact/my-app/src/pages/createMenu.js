@@ -22,7 +22,7 @@ function CreateMenu() {
                 setMenuItems(response.data.data || [])
             }
         } catch (error) {
-        //   alert(error)
+          alert(error)
         }
     }
 
@@ -96,22 +96,6 @@ function CreateMenu() {
                 alert(error)
             }
     }
-    
-    
-    // const addClick = async (data) => {
-    //     alert(data.data)
-    //     console.log(data)
-    //     // try {
-    //     //     const response = await createPost(data)
-    //     //     alert(response.data)
-    //     // //   if (response.status === 201) {
-    //     // //     getList()
-    //     // //   }
-    //     // } catch (error) {
-    //     //     console.log(console.error())
-    //     // //   alert(error)
-    //     // }
-    //   }
 
     return(
         <div className="v1_3">
@@ -153,9 +137,6 @@ function CreateMenu() {
             </div></Link>
             <div className="v6_12"></div>
             <span className="v6_13">SHOP</span>
-            {/*<form action="https://google.com">*/}
-            {/*    <input type="submit" value="Go to Google" />*/}
-            {/*</form>*/}
             <Link to="/showMenu"><div className="v6_14">MENU</div></Link>
             <Link to="/showOrder"><span className="v6_15">ORDER</span></Link>
             <Link to="/showMoney"><span className="v6_19">MONEY</span></Link>
