@@ -124,14 +124,8 @@ function CreateMenu() {
                 <input className="v6_289" type='checkbox' name='available' onChange={handleChangeInput} />
             {/* </label> */}
             <div className="v6_295">
-                <div className="v6_290"></div>
-                <div className="name"></div>
-                <div className="name"></div>
             </div>
             <div className="v6_296">
-                <div className="v6_297"></div>
-                <div className="name"></div>
-                <div className="name"></div>
             </div>
             <button className="v6_192" onClick={addClick}>  
                 {<span className="v6_194">Create Menu</span> }
