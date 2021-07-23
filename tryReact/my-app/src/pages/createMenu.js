@@ -58,44 +58,44 @@ function createMenu() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"></Link><span className="v6_32">POS COFFEE</span>
-            <div class="v6_192">
-                <div class="v6_193"></div><span class="v6_194">Create Menu</span></div>
+            <div className="v6_192">
+                <div className="v6_193"></div><span className="v6_194">Create Menu</span></div>
             <form>
             <label>
-            <span class="v6_276">Name : </span>
-                <input class="v6_277" type='text' name='name' onChange={handleChangeInput} />
+            <span className="v6_276">Name : </span>
+                <input className="v6_277" type='text' name='name' onChange={handleChangeInput} />
             </label>
             
             <label>
-            <span class="v6_278">Category :</span>
-                <input class="v6_279" type='text' name='category' onChange={handleChangeInput} />
+            <span className="v6_278">Category :</span>
+                <input className="v6_279" type='text' name='category' onChange={handleChangeInput} />
             </label>
-            <span class="v6_281">Ingredient :</span>
+            <span className="v6_281">Ingredient :</span>
             <label>
-            <span class="v6_283">Name :</span>
-                <input class="v6_282" type='text' name='ingredient_name' onChange={handleChangeInput} />
-            </label>
-            <label>
-            <span class="v6_284">Amount :</span>
-                <input class="v6_285" type='text' name='amount' onChange={handleChangeInput} />
+            <span className="v6_283">Name :</span>
+                <input className="v6_282" type='text' name='ingredient_name' onChange={handleChangeInput} />
             </label>
             <label>
-            <span class="v6_286">Price :</span>
-                <input class="v6_287" type='text' name='price' onChange={handleChangeInput} />
+            <span className="v6_284">Amount :</span>
+                <input className="v6_285" type='text' name='amount' onChange={handleChangeInput} />
             </label>
             <label>
-            <span class="v6_288">Available :</span>
-                <input class="v6_289" type='text' name='available' onChange={handleChangeInput} />
+            <span className="v6_286">Price :</span>
+                <input className="v6_287" type='text' name='price' onChange={handleChangeInput} />
             </label>
-            <div class="v6_295">
-                <div class="v6_290"></div>
-                <div class="name"></div>
-                <div class="name"></div>
+            <label>
+            <span className="v6_288">Available :</span>
+                <input className="v6_289" type='text' name='available' onChange={handleChangeInput} />
+            </label>
+            <div className="v6_295">
+                <div className="v6_290"></div>
+                <div className="name"></div>
+                <div className="name"></div>
             </div>
-            <div class="v6_296">
-                <div class="v6_297"></div>
-                <div class="name"></div>
-                <div class="name"></div>
+            <div className="v6_296">
+                <div className="v6_297"></div>
+                <div className="name"></div>
+                <div className="name"></div>
             </div>
             <button onClick={addClick}>Add</button>
             </form>

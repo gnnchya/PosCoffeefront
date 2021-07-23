@@ -27,61 +27,61 @@ function ShowMenu() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
-            <Link to="/createMenu"><div class="v6_62">
-                <div class="v6_60"></div><span class="v6_61">Create Menu</span>
+            <Link to="/createMenu"><div className="v6_62">
+                <div className="v6_60"></div><span className="v6_61">Create Menu</span>
             </div></Link>
-            <div class="pagination">
+            <div className="pagination">
                 <a href="#">❮</a>
                 <a href="#">❯</a>
             </div>
-            <span class="v6_71">1 2 3 4 5 6 7</span>
-            <Link to="/menuInfo"><div class="v12_301">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <span className="v6_71">1 2 3 4 5 6 7</span>
+            <Link to="/menuInfo"><div className="v12_301">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_304">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_304">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_302">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_302">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_303">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_303">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_305">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_305">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_308">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_308">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_306">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_306">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_307">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_307">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_310">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_310">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_313">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_313">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_311">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_311">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
-            <Link to="/menuInfo"><div class="v12_312">
-                <div class="v6_167"></div>
-                <div class="v6_168"></div><span class="v6_169">ICED LATTE</span><span class="v6_170">50 $</span>
+            <Link to="/menuInfo"><div className="v12_312">
+                <div className="v6_167"></div>
+                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
             </div></Link>
         </div>
     )
