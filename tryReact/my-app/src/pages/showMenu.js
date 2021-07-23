@@ -34,7 +34,6 @@ function ShowMenu() {
                 <a href="#">❮</a>
                 <a href="#">❯</a>
             </div>
-            <span className="v6_71">1 2 3 4 5 6 7</span>
             <Link to="/menuInfo"><div className="v12_301">
                 <div className="v6_167"></div>
                 <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
