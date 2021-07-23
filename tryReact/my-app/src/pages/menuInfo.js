@@ -37,15 +37,10 @@ function MenuInfo(){
         <div class="v14_9">
             <div class="v14_10"></div><span class="v14_11">Delete</span>
         </div>
-        <span class="v12_342">Name : </span>
-        <div class="v12_343"></div><span class="v12_344">Category :</span>
-        <div class="v12_345"></div><span class="v12_346">Ingredient :</span><span class="v12_347">Name :</span>
-        <div class="v12_348"></div><span class="v12_349">Amount :</span>
-        <div class="v12_350"></div><span class="v12_351">Price :</span>
-        <div class="v12_352"></div><span class="v12_353">Available :</span>
-        <div class="v12_354"></div><span class="v12_364">Description :</span>
-        <div class="v12_365"></div><span class="v12_366">Amount :</span>
-        <div class="v12_367"></div>
+        <span class="v12_342">Name : </span><div class="v12_343"></div>
+        <span class="v12_351">Price :</span><div class="v12_352"></div>
+        <span class="v12_364">Description :</span><div class="v12_365"></div>
+        <span class="v12_366">Amount :</span><div class="v12_367"></div>
     </div>
     )
 }
