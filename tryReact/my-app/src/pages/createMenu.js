@@ -5,6 +5,8 @@ import {createPost, getMenu } from '../actions/posts'
 export default CreateMenu
 
 function CreateMenu() {
+    var ingredientCount = 0;
+    var categoryCount = 0;
     const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState({})
     useEffect(() => {
@@ -20,7 +22,7 @@ function CreateMenu() {
                 setMenuItems(response.data.data || [])
             }
         } catch (error) {
-          alert(error)
+        //   alert(error)
         }
     }
 
@@ -56,6 +58,46 @@ function CreateMenu() {
         // }
 
     }
+
+    const addCategory = (handleChangeInput) => {
+        try{
+            var ele = document.createElement("input");
+            ele.setAttribute("type", "text")
+            ele.setAttribute("class", "v6_279")
+            ele.setAttribute("name", "category")
+            // ele.setAttribute("onchange", {handleChangeInput})
+        
+            document.getElementById("category1").appendChild(ele);
+            }catch (error){
+                alert(error)
+            }
+    }
+
+    const addIngredient = (handleChangeInput) => {
+        try{
+            var name = document.createElement("input");
+            var amount = document.createElement("input");
+        
+            name.setAttribute("type", "text")
+            amount.setAttribute("type", "number")
+        
+            name.setAttribute("class", "addname")
+            amount.setAttribute("class", "addAmount")
+        
+            name.setAttribute("name", "ingredient_name")
+            amount.setAttribute("name", "amount")
+        
+            // name.setAttribute("onchange", {handleChangeInput})
+            // amount.setAttribute("onchange", {handleChangeInput})
+        
+            document.getElementById("ingredient").appendChild(name);
+            document.getElementById("ingredient").appendChild(amount);
+            }catch (error){
+                alert(error)
+            }
+    }
+    
+    
     // const addClick = async (data) => {
     //     alert(data.data)
     //     console.log(data)
@@ -76,27 +118,27 @@ function CreateMenu() {
 
 <form className="form">
             <span className="v6_276">Name : </span>
-                <input className="v6_277" type='text' name='name' /*onChange={handleChangeInput} *//>
+                <input className="v6_277" type='text' name='name' onChange={handleChangeInput} />
                 <span className="v6_278">Category :</span>
 
             <div className="category" id="category1">
-                <input className="v6_279" type='text' name='category' /*onChange={handleChangeInput}*/ />
-                <button className="v6_295" onclick={addCategory()}></button>
+                <input className="v6_279" type='text' name='category' onChange={handleChangeInput} />
+                <button className="v6_295" onClick={addCategory}></button>
             </div>
 
-            <div className="ingredient">
+            <div className="ingredient" id="ingredient">
                 <span className="v6_281">Ingredient :</span>
                 <span className="v6_283">Name :</span>
-                <button className="v6_296" onclick={addIngredient()}> </button>
-                <input className="v6_282" type='text' name='ingredient_name' /*onChange={handleChangeInput}*/ />
+                <button className="v6_296" onClick={addIngredient}> </button>
+                <input className="v6_282" type='text' name='ingredient_name' onChange={handleChangeInput} />
                 <span className="v6_284">Amount :</span>
-                <input className="v6_285" type='number' name='amount' /*onChange={handleChangeInput}*/ />
+                <input className="v6_285" type='number' name='amount' onChange={handleChangeInput}/>
             </div>
 
             <span className="v6_286">Price :</span>
-                <input className="v6_287" type='number' name='price' /*onChange={handleChangeInput}*/ required="true"/>
+                <input className="v6_287" type='number' name='price' onChange={handleChangeInput} /*required="true"*//>
             <span className="v6_288">Available :</span>
-                <input className="v6_289" type='checkbox' name='available' /*onChange={handleChangeInput}*/ />
+                <input className="v6_289" type='checkbox' name='available' onChange={handleChangeInput} />
             <button className="v6_192" onClick={addClick}>  
                 {<span className="v6_194">Create Menu</span> }
             </button>
@@ -140,40 +182,3 @@ function CreateMenu() {
         </div>
     )
 }
-
-function addCategory(handleChangeInput) {
-    try{
-    var ele = document.createElement("input");
-    ele.setAttribute("type", "text")
-    ele.setAttribute("class", "v6_279")
-    ele.setAttribute("name", "category")
-    ele.setAttribute("onchange", {handleChangeInput})
-
-
-
-    document.getElementById("category1").appendChild(ele);
-    }catch (error){}
-}
-
-function addIngredient(handleChangeInput) {
-    try{
-    var name = document.createElement("input");
-    var amount = document.createElement("input");
-
-    name.setAttribute("type", "text")
-    amount.setAttribute("type", "number")
-
-    name.setAttribute("class", "v6_282")
-    amount.setAttribute("class", "v6_285")
-
-    name.setAttribute("name", "ingredient_name")
-    amount.setAttribute("name", "amount")
-
-    name.setAttribute("onchange", {handleChangeInput})
-    amount.setAttribute("onchange", {handleChangeInput})
-
-    document.getElementById("ingredient").appendChild(name);
-    document.getElementById("ingredient").appendChild(amount);
-    }catch (error){}
-}
-
