@@ -95,7 +95,7 @@ function createMenu() {
                 <div className="v6_22"></div>
                 <span className="v6_23">LOG OUT</span>
             </span>
-            <Link to="/homepage"></Link><span className="v6_32">POS COFFEE</span>
+            <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
             <form>
             <label>
             <span className="v6_276">Name : </span>
