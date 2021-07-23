@@ -61,32 +61,32 @@ function createMenu() {
             <div className="v6_192">
                 <div className="v6_193"></div><span className="v6_194">Create Menu</span></div>
             <form>
-            <label>
+            {/* <label> */}
             <span className="v6_276">Name : </span>
                 <input className="v6_277" type='text' name='name' onChange={handleChangeInput} />
-            </label>
+            {/* </label> */}
             
-            <label>
+            {/* <label> */}
             <span className="v6_278">Category :</span>
                 <input className="v6_279" type='text' name='category' onChange={handleChangeInput} />
-            </label>
+            {/* </label> */}
             <span className="v6_281">Ingredient :</span>
-            <label>
+            {/* <label> */}
             <span className="v6_283">Name :</span>
                 <input className="v6_282" type='text' name='ingredient_name' onChange={handleChangeInput} />
-            </label>
-            <label>
+            {/* </label> */}
+            {/* <label> */}
             <span className="v6_284">Amount :</span>
                 <input className="v6_285" type='text' name='amount' onChange={handleChangeInput} />
-            </label>
-            <label>
+            {/* </label> */}
+            {/* <label> */}
             <span className="v6_286">Price :</span>
                 <input className="v6_287" type='text' name='price' onChange={handleChangeInput} />
-            </label>
-            <label>
+            {/* </label> */}
+            {/* <label> */}
             <span className="v6_288">Available :</span>
                 <input className="v6_289" type='text' name='available' onChange={handleChangeInput} />
-            </label>
+            {/* </label> */}
             <div className="v6_295">
                 <div className="v6_290"></div>
                 <div className="name"></div>
