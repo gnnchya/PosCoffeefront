@@ -61,13 +61,15 @@ function CreateMenu() {
 
     const addCategory = (handleChangeInput) => {
         try{
-            var ele = document.createElement("input");
-            ele.setAttribute("type", "text")
-            ele.setAttribute("class", "v6_279")
-            ele.setAttribute("name", "category")
-            // ele.setAttribute("onchange", {handleChangeInput})
-        
-            document.getElementById("category1").appendChild(ele);
+            if(categoryCount <3){
+                var ele = document.createElement("input");
+                ele.setAttribute("type", "text")
+                ele.setAttribute("class", "v6_279")
+                ele.setAttribute("name", "category")
+                ele.onchange = {handleChangeInput}
+            
+                document.getElementById("category1").appendChild(ele);
+            }
             }catch (error){
                 alert(error)
             }
@@ -75,23 +77,25 @@ function CreateMenu() {
 
     const addIngredient = (handleChangeInput) => {
         try{
-            var name = document.createElement("input");
-            var amount = document.createElement("input");
-        
-            name.setAttribute("type", "text")
-            amount.setAttribute("type", "number")
-        
-            name.setAttribute("class", "addname")
-            amount.setAttribute("class", "addAmount")
-        
-            name.setAttribute("name", "ingredient_name")
-            amount.setAttribute("name", "amount")
-        
-            // name.setAttribute("onchange", {handleChangeInput})
-            // amount.setAttribute("onchange", {handleChangeInput})
-        
-            document.getElementById("ingredient").appendChild(name);
-            document.getElementById("ingredient").appendChild(amount);
+            if(ingredientCount < 3){
+                var name = document.createElement("input");
+                var amount = document.createElement("input");
+            
+                name.setAttribute("type", "text")
+                amount.setAttribute("type", "number")
+            
+                name.setAttribute("class", "addname")
+                amount.setAttribute("class", "addAmount")
+            
+                name.setAttribute("name", "ingredient_name")
+                amount.setAttribute("name", "amount")
+            
+                name.onchange = {handleChangeInput}
+                amount.onchange = {handleChangeInput}
+            
+                document.getElementById("ingredient").appendChild(name);
+                document.getElementById("ingredient").appendChild(amount);
+            }
             }catch (error){
                 alert(error)
             }
@@ -100,7 +104,7 @@ function CreateMenu() {
     return(
         <div className="v1_3">
 
-<form className="form">
+        <form className="form">
             <span className="v6_276">Name : </span>
                 <input className="v6_277" type='text' name='name' onChange={handleChangeInput} />
                 <span className="v6_278">Category :</span>
