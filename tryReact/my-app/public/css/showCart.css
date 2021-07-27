@@ -310,12 +310,20 @@
     border-bottom-right-radius: 5px;
     overflow: hidden;
   }
+  .payment{
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    top: 475px;
+    left: 280px;
+    background: white;
+  }
   .v17_136 {
     width: 345px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 475px;
-    left: 280px;
+    top: 0px;
+    left: 0px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -334,8 +342,8 @@
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
-    top: 475px;
-    left: 353px;
+    top: 0px;
+    left: 73px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -346,8 +354,8 @@
     width: 345px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 543px;
-    left: 280px;
+    top: 62px;
+    left: 0px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -366,8 +374,8 @@
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
-    top: 543px;
-    left: 379px;
+    top: 62px;
+    left: 99px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -378,8 +386,8 @@
     width: 345px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 605px;
-    left: 280px;
+    top: 124px;
+    left: 0px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -398,8 +406,8 @@
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
-    top: 607px;
-    left: 353px;
+    top: 124px;
+    left: 75px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -410,8 +418,8 @@
     width: 345px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 735px;
-    left: 280px;
+    top: 186px;
+    left: 0px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -430,8 +438,8 @@
     background: rgba(245,201,88,1);
     opacity: 1;
     position: absolute;
-    top: 735px;
-    left: 426px;
+    top: 186px;
+    left: 137px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -442,8 +450,8 @@
     width: 345px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 673px;
-    left: 280px;
+    top: 248px;
+    left: 0px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -462,8 +470,8 @@
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
-    top: 673px;
-    left: 426px;
+    top: 248px;
+    left: 140px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
