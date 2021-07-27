@@ -1,30 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import { createPost, getAllMenu } from '../actions/posts'
-// import PostList from '../components/PostList'
-import { Redirect } from "react-router-dom";
+import { getAllOrder } from '../actions/posts'
 
-function ShowMenu() {
-    
-    let limit = 12
-    let {page} = useParams()
-    if (Number(page) == 0){
-        let {page} = "1"
-    }
-    const [menuItem, setMenuItems] = useState([])
-    const [menu, setMenu] = useState({})
+function ShowOrder() {
+    const [orderItem, setOrderItems] = useState([])
+    // const [menu, setMenu] = useState({})
     useEffect(() => {
         getList()
     }, [])
 
     const getList = async (e) => {
         try {
-            const response = await getAllMenu(limit,Number(page))
+            const response = await getAllOrder()
             console.log(response.data.data)
             // alert(response.data.data[0])
             if (response.status === 200) {
-                setMenuItems(response.data.data || [])
+                setOrderItems(response.data.data || [])
             }
         } catch (error) {
             alert(error)
@@ -44,7 +35,7 @@ function ShowMenu() {
             {/*<form action="https://google.com">*/}
             {/*    <input type="submit" value="Go to Google" />*/}
             {/*</form>*/}
-            <Link to="/showMenu/1"><div className="v6_14">MENU</div></Link>
+            <Link to="/showMenu"><div className="v6_14">MENU</div></Link>
             <Link to="/showOrder"><span className="v6_15">ORDER</span></Link>
             <Link to="/showMoney"><span className="v6_19">MONEY</span></Link>
             <Link to="/showStock"><span className="v6_20">STOCK</span></Link>
@@ -56,15 +47,12 @@ function ShowMenu() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
-            <Link to="/createMenu"><div className="v6_62">
-                <div className="v6_60"></div><span className="v6_61">Create Menu</span>
-            </div></Link>
             <div className="pagination">
-            <Redirect to={{pathname:`/showMenu/${Number(page)-1}`}}>❮</Redirect>
-            <Redirect to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Redirect>
+                <a href="#">❮</a>
+                <a href="#">❯</a>
             </div>
             <div className='menu'>
-            {menuItem.map((item, index) => {
+            {orderItem.map((item, index) => {
                 return (
                     
                         <Link to={{pathname:`/menuInfo/${item.id}`}}><div className="v12_301">
@@ -79,4 +67,4 @@ function ShowMenu() {
     )
 }
 
-export default ShowMenu
+export default ShowOrder

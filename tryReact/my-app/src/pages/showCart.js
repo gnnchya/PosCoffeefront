@@ -25,18 +25,17 @@ function ShowCart(){
             
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
             
-            <span class="v14_84">Name : </span>
-            <div class="v14_85"></div><span class="v14_86">Description :</span>
-            <div class="v14_87"></div><span class="v17_112">Price :</span>
-            <div class="v17_113"></div><span class="v17_106">Amount :</span>
-            <div class="v17_107"></div>
-            <span class="v17_121">Name : </span>
-            <div class="v17_122"></div><span class="v17_123">Description :</span>
-            <div class="v17_124"></div><span class="v17_125">Price :</span>
-            <div class="v17_126"></div><span class="v17_127">Amount :</span>
-            <div class="v17_128"></div>
-            <div class="name"></div>
-
+            <div className="orderArea">   
+                <div className="orders"> 
+                    <span class="v14_84">Name : </span>
+                    <div class="v14_85"></div><span class="v14_86">Description :</span>
+                    <div class="v14_87"></div><span class="v17_112">Price :</span>
+                    <div class="v17_113"></div><span class="v17_106">Amount :</span>
+                    <div class="v17_107"></div>
+                </div>
+            </div>
+           
+            
             <div className="payment">
                 <span class="v17_136">Paid :</span>
                 <div class="v17_137"></div><span class="v17_138">Method :</span>

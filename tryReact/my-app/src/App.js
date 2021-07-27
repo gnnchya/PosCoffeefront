@@ -13,6 +13,7 @@ import ShowMenu from './pages/showMenu';
 import MenuInfo from './pages/menuInfo';
 import ShowCart from './pages/showCart';
 import CreateMenu from './pages/createMenu'
+import ShowOrder from './pages/showOrder'
 import React, { Component }  from 'react';
 import TestAxios from './pages/testAxios';
 
@@ -28,17 +29,20 @@ function App() {
                 <Route exact path="/homepage">
                     <HomePage />
                 </Route>
-                <Route exact path="/showMenu">
+                <Route exact path="/showMenu/:page">
                     <ShowMenu />
                 </Route>
-                <Route exact path="/menuInfo">
+                <Route exact path="/menuInfo/:id" >
                     <MenuInfo />
                 </Route>
-                <Route exact path="/showCart">
+                <Route path="/showCart">
                     <ShowCart />
                 </Route>
                 <Route exact path="/createMenu">
                     <CreateMenu />
+                </Route>
+                <Route exact path="/showOrder">
+                    <ShowOrder />
                 </Route>
             </Switch>
         </Router>
