@@ -363,7 +363,7 @@
   .v6_281 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: relative;
+    position: absolute;
     top: 2px;
     left: 0px;
     font-family: Marvel;
@@ -375,7 +375,7 @@
   .v6_283 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: relative;
+    position: absolute;
     top: 2px;
     left: 40px;
     font-family: Marvel;
@@ -397,7 +397,7 @@
     opacity: 1;
     position: relative;
     top: 3px;
-    left: 8px;
+    left: 532px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -431,7 +431,7 @@
   .v6_284 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: relative;
+    position: absolute;
     top: 2px;
     left: 30px;
     font-family: Marvel;
@@ -453,7 +453,7 @@
     opacity: 1;
     position: relative;
     top: 3px;
-    left: 40px;
+    left: 987px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
