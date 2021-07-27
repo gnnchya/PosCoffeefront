@@ -358,7 +358,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
-    margin-top: 8px;
+    margin-top: 10px;
   }
   .v6_281 {
     width: 124px;
@@ -377,7 +377,7 @@
     color: rgba(0,0,0,1);
     position: relative;
     top: 2px;
-    left: 40px;
+    left: 50px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -397,7 +397,7 @@
     opacity: 1;
     position: relative;
     top: 3px;
-    left: 8px;
+    left: 60px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -406,23 +406,18 @@
   }
 
   .addname {
-    width: 323px;
-    height: 42px;
-    padding-left: 10px;
+    width: 800px;
+    min-height: 0px;
     color: rgba(0,0,0,1);
     font-family: Marvel;
     font-weight: Bold;
     font-size: 25px;
     border:none;
-    background: rgba(228,228,228,1);
+    background: white;
     opacity: 1;
     position: relative;
-    top: 3px;
-    left: 240px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    top: 185px;
+    left: 395px;
     overflow: hidden;
     margin-top: 10px;
   }
@@ -433,7 +428,7 @@
     color: rgba(0,0,0,1);
     position: relative;
     top: 2px;
-    left: 30px;
+    left: 80px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -453,36 +448,13 @@
     opacity: 1;
     position: relative;
     top: 3px;
-    left: 40px;
+    left: 90px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
   }
-
-  .addAmount {
-    width: 132px;
-    height: 42px;
-    padding-left: 10px;
-    color: rgba(0,0,0,1);
-    font-family: Marvel;
-    font-weight: Bold;
-    font-size: 25px;
-    border:none;
-    background: rgba(228,228,228,1);
-    opacity: 1;
-    position: relative;
-    top: 3px;
-    left: 365px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    overflow: hidden;
-    margin-top: 10px;
-  }
-
   .v6_286 {
     width: 80px;
     color: rgba(0,0,0,1);
@@ -574,7 +546,7 @@
     opacity: 1;
     position: relative;
     top: 12px;
-    left: 648px;
+    left: 110px;
     overflow: hidden;
     border-radius: 50%;
   }
@@ -674,6 +646,17 @@
     position: relative;
     top: 180px;
     left:280px;
+    overflow: hidden;
+    margin:0px;
+  }
+
+  .ingredientAdd{
+    width: 1000px;
+    min-height: 55px;
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left:0px;
     overflow: hidden;
     margin:0px;
   }

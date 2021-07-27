@@ -37,7 +37,7 @@ function CreateMenu() {
                 avail = true
             }
             console.log("category to send", categories)
-            const temp = {...menu, price:+menu.price, available: avail, category:categories}
+            const temp = {...menu, price:+menu.price, available: avail, category:categories, ingredient:ingredients}
             const response = await createPost(temp)
             console.log("res",menu)
 
@@ -133,24 +133,27 @@ function CreateMenu() {
             <div className="ingredient" id="ingredient">  
                 <span className="v6_281">Ingredient :</span>
                 <span className="v6_283">Name :</span>
-                <button className="v6_296" onClick={handleChangeIngredientInput}> </button>
                 <input className="v6_282" type='text' name='ingredient_name' onChange={(e) => setIngredient(e.target.value)} value={ingredient} />
                 <span className="v6_284">Amount :</span>
                 <input className="v6_285" type='number' name='amount'  onChange={(e) => setIngredient(e.target.value)} value={ingredient}/>
+                <button className="v6_296" onClick={handleChangeIngredientInput}> </button>
             </div>
-            
+
+            <div className="addname"> 
             {ingredients.length>0 && ingredients.map((ingredientItem, index) =>{
                 console.log("ingredient item", ingredientItem)
                 return (
-                    
-                    <div key={index} className="ingredient" >
-                        <input className="v6_282" type='text' name='ingredient_name' defaultValue={ingredientItem} />
-                        <input className="v6_285" type='number' name='amount' defaultValue={ingredientItem}/>
-                    </div>
+                        <div key={index} className="ingredientAdd" >
+                            <span className="v6_283">Name :</span>
+                            <input className="v6_282" type='text' name='ingredient[][ingredient_name]' defaultValue={ingredientItem} />
+                            <span className="v6_284">Amount :</span>
+                            <input className="v6_285" type='number' name='ingredient[][amount]' defaultValue={ingredientItem}/>
+                        </div>
                 )
             }
 
             )}
+            </div>
 
             <span className="v6_286">Price :</span>
                 <input className="v6_287" type='number' name='price' onChange={handleChangeInput} /*required="true"*//>
