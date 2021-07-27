@@ -30,7 +30,8 @@ function App() {
                     <HomePage />
                 </Route>
                 <Route exact path="/showMenu/:page">
-                    <ShowMenu />
+                
+                    <ShowMenu/>
                 </Route>
                 <Route exact path="/menuInfo/:id" >
                     <MenuInfo />
