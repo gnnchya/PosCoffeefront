@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { createPost, getAllMenu } from '../actions/posts'
 // import PostList from '../components/PostList'
-import { Redirect } from "react-router-dom";
 
 function ShowMenu() {
-    
     let limit = 12
     let {page} = useParams()
     if (Number(page) == 0){
@@ -60,14 +58,14 @@ function ShowMenu() {
                 <div className="v6_60"></div><span className="v6_61">Create Menu</span>
             </div></Link>
             <div className="pagination">
-            <Redirect to={{pathname:`/showMenu/${Number(page)-1}`}}>❮</Redirect>
-            <Redirect to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Redirect>
+            <Link to={{pathname:`/showMenu/${Number(page)-1}`}}>❮</Link>
+            <Link to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Link>
             </div>
             <div className='menu'>
             {menuItem.map((item, index) => {
                 return (
                     
-                        <Link to={{pathname:`/menuInfo/${item.id}`}}><div className="v12_301">
+                        <Link to={{pathname:`/menuInfo/${item.id}`}} ><div className="v12_301">
                             <div className="v6_167"></div>
                             <div className="v6_168"></div><span className="v6_169" key={index}>{item.name}</span><span className="v6_170" key={index}>{item.price}</span>
                         </div></Link>
