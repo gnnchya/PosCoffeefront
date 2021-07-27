@@ -43,8 +43,6 @@ function MenuInfo() {
 
     const handleChangeInput = (e) => {
         const name = e.target.name
-        const option = e.target.option
-        const amount = e.target.amount
         const value = e.target.value
         setCart((oldValue) => ({ ...oldValue, [name]: value }))
         // if (name === 'title') {
@@ -82,7 +80,7 @@ function MenuInfo() {
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
             <button class="v12_338">
 
-                < div class="v12_339" onClick={addToCart}>
+                < div class="v12_339" onClick={addCart}>
                 <span class="v12_340">Add to cart</span>
                 </ div>
             </button>
@@ -93,8 +91,8 @@ function MenuInfo() {
                 <div class="v14_10"></div><span class="v14_11">Delete</span>
             </div>
                     <div>
-                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" >{menuItem.name}</div>
-                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" >{menuItem.price}</div>
+                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" onChange={handleChangeInput}>{menuItem.name}</div>
+                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" onChange={handleChangeInput}>{menuItem.price}</div>
                         <span className="v12_364">Description :</span>
                         <input className="v12_365" type='text' name='option' onChange={handleChangeInput} />
                         <span className="v12_366">Amount :</span>
