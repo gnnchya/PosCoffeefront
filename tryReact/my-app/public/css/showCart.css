@@ -284,12 +284,30 @@
     opacity: 1;
     text-align: center;
   }
+  .orderArea{
+    width: 1150px;
+    min-height: 120px;
+    position: relative;
+    top: 150px;
+    left: 280px;
+    background: white;
+  }
+  .orders{
+    width: 1150px;
+    min-height: 110px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: white;
+    margin-top: 10px;
+  }
+
   .v14_84 {
     width: 345px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 160px;
-    left: 280px;
+    top: 0px;
+    left: 0px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -299,11 +317,18 @@
   .v14_85 {
     width: 492px;
     height: 42px;
+    color: rgba(0,0,0,1);
+    font-family: Marvel;
+    font-weight: Bold;
+    font-size: 25px;
+    border:none;
+    padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
-    top: 160px;
-    left: 364px;
+    top: 0px;
+    left: 84px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -312,9 +337,9 @@
   }
   .payment{
     width: 1000px;
-    height: 390px;
+    height: 420px;
     position: relative;
-    top: 475px;
+    top: 200px;
     left: 280px;
     background: white;
   }
@@ -339,6 +364,7 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -371,6 +397,7 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -403,6 +430,7 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -435,6 +463,7 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
+    padding-top: 5px;
     background: rgba(245,201,88,1);
     opacity: 1;
     position: absolute;
@@ -467,6 +496,7 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -482,8 +512,8 @@
     width: 146px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 223px;
-    left: 280px;
+    top: 63px;
+    left: 0px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -493,11 +523,18 @@
   .v14_87 {
     width: 966px;
     height: 42px;
+    color: rgba(0,0,0,1);
+    font-family: Marvel;
+    font-weight: Bold;
+    font-size: 25px;
+    border:none;
+    padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
-    top: 222px;
-    left: 417px;
+    top: 63px;
+    left: 137px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -508,8 +545,8 @@
     width: 80px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 157px;
-    left: 1135px;
+    top: 2px;
+    left: 855px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -519,11 +556,18 @@
   .v17_113 {
     width: 168px;
     height: 42px;
+    color: rgba(0,0,0,1);
+    font-family: Marvel;
+    font-weight: Bold;
+    font-size: 25px;
+    border:none;
+    padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
-    top: 157px;
-    left: 1215px;
+    top: 2px;
+    left: 935px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -534,8 +578,8 @@
     width: 124px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 157px;
-    left: 877px;
+    top: 2px;
+    left: 597px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -545,11 +589,18 @@
   .v17_107 {
     width: 132px;
     height: 42px;
+    color: rgba(0,0,0,1);
+    font-family: Marvel;
+    font-weight: Bold;
+    font-size: 25px;
+    border:none;
+    padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
-    top: 157px;
-    left: 982px;
+    top: 2px;
+    left: 702px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
