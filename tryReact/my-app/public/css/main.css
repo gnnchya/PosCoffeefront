@@ -12,7 +12,7 @@ body {
   position: relative;
   top: 0px;
   left: 0px;
-  overflow: hidden;
+  overflow: auto;
   margin:0px;
 }
 .v6_3 {

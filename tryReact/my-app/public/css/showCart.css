@@ -247,8 +247,8 @@
     background: rgba(245,201,88,1);
     opacity: 1;
     position: absolute;
-    top: 793px;
-    left: 1135px;
+    top: 350px;
+    left: 840px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -312,8 +312,8 @@
   }
   .payment{
     width: 1000px;
-    height: 600px;
-    position: absolute;
+    height: 390px;
+    position: relative;
     top: 475px;
     left: 280px;
     background: white;

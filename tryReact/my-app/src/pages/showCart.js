@@ -44,10 +44,10 @@ function ShowCart(){
                 <div class="v17_141"></div><span class="v17_144">Total Price :</span>
                 <div class="v17_145"></div><span class="v17_142">Destination :</span>
                 <div class="v17_143"></div>
-            </div>
 
-            <div class="v14_81">
-                <span class="v14_82">Finish</span>
+                <div class="v14_81">
+                    <span class="v14_82">Finish</span>
+                </div>
             </div>
 
         </div>
