@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { createPost, getAllMenu } from '../actions/posts'
 // import PostList from '../components/PostList'
+import { Redirect } from "react-router-dom";
 
 function ShowMenu() {
+    
+    let limit = 12
+    let {page} = useParams()
+    if (Number(page) == 0){
+        let {page} = "1"
+    }
     const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState({})
     useEffect(() => {
@@ -12,7 +20,7 @@ function ShowMenu() {
 
     const getList = async (e) => {
         try {
-            const response = await getAllMenu()
+            const response = await getAllMenu(limit,Number(page))
             console.log(response.data.data)
             // alert(response.data.data[0])
             if (response.status === 200) {
@@ -36,7 +44,7 @@ function ShowMenu() {
             {/*<form action="https://google.com">*/}
             {/*    <input type="submit" value="Go to Google" />*/}
             {/*</form>*/}
-            <Link to="/showMenu"><div className="v6_14">MENU</div></Link>
+            <Link to="/showMenu/1"><div className="v6_14">MENU</div></Link>
             <Link to="/showOrder"><span className="v6_15">ORDER</span></Link>
             <Link to="/showMoney"><span className="v6_19">MONEY</span></Link>
             <Link to="/showStock"><span className="v6_20">STOCK</span></Link>
@@ -52,8 +60,8 @@ function ShowMenu() {
                 <div className="v6_60"></div><span className="v6_61">Create Menu</span>
             </div></Link>
             <div className="pagination">
-                <a href="#">❮</a>
-                <a href="#">❯</a>
+            <Redirect to={{pathname:`/showMenu/${Number(page)-1}`}}>❮</Redirect>
+            <Redirect to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Redirect>
             </div>
             <div className='menu'>
             {menuItem.map((item, index) => {

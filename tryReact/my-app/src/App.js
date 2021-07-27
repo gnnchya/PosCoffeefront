@@ -29,13 +29,13 @@ function App() {
                 <Route exact path="/homepage">
                     <HomePage />
                 </Route>
-                <Route exact path="/showMenu">
+                <Route exact path="/showMenu/:page">
                     <ShowMenu />
                 </Route>
                 <Route exact path="/menuInfo/:id" >
                     <MenuInfo />
                 </Route>
-                <Route exact path="/showCart">
+                <Route path="/showCart">
                     <ShowCart />
                 </Route>
                 <Route exact path="/createMenu">
