@@ -90,7 +90,11 @@ function CreateMenu() {
             <span className="v6_276">Name : </span>
                 <input className="v6_277" type='text' name='name' onChange={handleChangeInput} />
                 <span className="v6_278">Category :</span>
-
+                <div className="category" id="category1">
+                <input className="v6_279" type='text' name='category'  onChange={(e) => setCategory(e.target.value)} value={category}/>
+                <button className="v6_295" onClick={handleChangeCategoryInput}></button >
+            </div>
+            
             {categories.length>0 && categories.map((categoryItem, index) => {
                 return (
                     <div key = {index} className="category"  disabled>
@@ -98,10 +102,7 @@ function CreateMenu() {
                     </div>
                 )
             })}
-            <div className="category" id="category1">
-                <input className="v6_279" type='text' name='category'  onChange={(e) => setCategory(e.target.value)} value={category}/>
-                <button className="v6_295" onClick={handleChangeCategoryInput}></button >
-            </div>
+          
             
             
 
