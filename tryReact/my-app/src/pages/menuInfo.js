@@ -41,10 +41,11 @@ function MenuInfo() {
 
 
     const handleChangeInput = (e) => {
+        const name = e.target.name
         const option = e.target.option
         const amount = e.target.amount
         const value = e.target.value
-        setCart((oldValue) => ({ ...oldValue, [option]: value }))
+        setCart((oldValue) => ({ ...oldValue, [name]: value }))
         // if (name === 'title') {
         //     setTitle(value)
         // } else {
@@ -78,10 +79,12 @@ function MenuInfo() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
-            <div class="v12_338">
+            <button class="v12_338">
 
-                <div class="v12_339"></div><span class="v12_340">Add to cart</span>
-            </div>
+                < div class="v12_339" onClick={addToCart}>
+                <span class="v12_340">Add to cart</span>
+                </ div>
+            </button>
             <Link to="/updateMenu"><div class="v14_6">
                 <div class="v14_7"></div><span class="v14_8">Update</span>
             </div></Link>
@@ -91,8 +94,8 @@ function MenuInfo() {
             {menuItem.map((item, index) => {
                 return (
                     <div>
-                        <span class="v12_342">Name : </span><div class="v12_343" key={index}>{item.name}</div>
-                        <span class="v12_351">Price :</span><div class="v12_352" key={index}>{item.price}</div>
+                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" key={index}>{item.name}</div>
+                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" key={index}>{item.price}</div>
                         <span className="v12_364">Description :</span>
                         <input className="v12_365" type='text' name='option' onChange={handleChangeInput} />
                         <span className="v12_366">Amount :</span>
