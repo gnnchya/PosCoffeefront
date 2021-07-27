@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
-import { createPost, getMenu } from '../actions/posts'
+import { createPost, getMenu, addToCart } from '../actions/posts'
 // import PostList from '../components/PostList'
 export default MenuInfo
 
 function MenuInfo() {
     const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState({})
+    const [cart, setCart] = useState({})
     useEffect(() => {
         getList()
     }, [])
@@ -24,10 +25,27 @@ function MenuInfo() {
         }
     }
 
+    const addCart = async (e) => {
+        try {
+            e.preventDefault()
+            const response = await addToCart(cart)
+            console.log(response.data.data)
+            // alert(response.data.data[0])
+            // if (response.status === 200) {
+            //     setCart(response.data.data || [])
+            // }
+        } catch (error) {
+            alert(error)
+        }
+    }
+
+
     const handleChangeInput = (e) => {
+        const name = e.target.name
         const option = e.target.option
         const amount = e.target.amount
-        // setMenu((oldValue) => ({ ...oldValue, [name]: value }))
+        const value = e.target.value
+        setCart((oldValue) => ({ ...oldValue, [name]: value }))
         // if (name === 'title') {
         //     setTitle(value)
         // } else {
@@ -61,10 +79,12 @@ function MenuInfo() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
-            <div class="v12_338">
+            <button class="v12_338">
 
-                <div class="v12_339"></div><span class="v12_340">Add to cart</span>
-            </div>
+                < div class="v12_339" onClick={addToCart}>
+                <span class="v12_340">Add to cart</span>
+                </ div>
+            </button>
             <Link to="/updateMenu"><div class="v14_6">
                 <div class="v14_7"></div><span class="v14_8">Update</span>
             </div></Link>
@@ -74,8 +94,8 @@ function MenuInfo() {
             {menuItem.map((item, index) => {
                 return (
                     <div>
-                        <span class="v12_342">Name : </span><div class="v12_343" key={index}>{item.name}</div>
-                        <span class="v12_351">Price :</span><div class="v12_352" key={index}>{item.price}</div>
+                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" key={index}>{item.name}</div>
+                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" key={index}>{item.price}</div>
                         <span className="v12_364">Description :</span>
                         <input className="v12_365" type='text' name='option' onChange={handleChangeInput} />
                         <span className="v12_366">Amount :</span>
