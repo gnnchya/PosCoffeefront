@@ -31,7 +31,7 @@ function App() {
                 <Route exact path="/showMenu">
                     <ShowMenu />
                 </Route>
-                <Route exact path="/menuInfo">
+                <Route exact path="/menuInfo/:id">
                     <MenuInfo />
                 </Route>
                 <Route exact path="/showCart">
@@ -39,6 +39,9 @@ function App() {
                 </Route>
                 <Route exact path="/createMenu">
                     <CreateMenu />
+                </Route>
+                <Route exact path="/showOrder">
+                    <ShowOrder />
                 </Route>
             </Switch>
         </Router>
