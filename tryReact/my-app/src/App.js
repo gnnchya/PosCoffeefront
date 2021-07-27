@@ -13,6 +13,7 @@ import ShowMenu from './pages/showMenu';
 import MenuInfo from './pages/menuInfo';
 import ShowCart from './pages/showCart';
 import CreateMenu from './pages/createMenu'
+import ShowOrder from './pages/showOrder'
 import React, { Component }  from 'react';
 import TestAxios from './pages/testAxios';
 
