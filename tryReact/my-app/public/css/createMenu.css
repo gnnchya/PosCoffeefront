@@ -406,23 +406,18 @@
   }
 
   .addname {
-    width: 323px;
-    height: 42px;
-    padding-left: 10px;
+    width: 800px;
+    min-height: 0px;
     color: rgba(0,0,0,1);
     font-family: Marvel;
     font-weight: Bold;
     font-size: 25px;
     border:none;
-    background: rgba(228,228,228,1);
+    background: white;
     opacity: 1;
     position: relative;
-    top: 3px;
-    left: 240px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    top: 185px;
+    left: 395px;
     overflow: hidden;
     margin-top: 10px;
   }
@@ -459,28 +454,6 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
-  }
-
-  .addAmount {
-    width: 132px;
-    height: 42px;
-    padding-left: 10px;
-    color: rgba(0,0,0,1);
-    font-family: Marvel;
-    font-weight: Bold;
-    font-size: 25px;
-    border:none;
-    background: rgba(228,228,228,1);
-    opacity: 1;
-    position: relative;
-    top: 3px;
-    left: 500px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    overflow: hidden;
-    margin-top: 10px;
   }
   .v6_286 {
     width: 80px;
@@ -673,6 +646,17 @@
     position: relative;
     top: 180px;
     left:280px;
+    overflow: hidden;
+    margin:0px;
+  }
+
+  .ingredientAdd{
+    width: 1000px;
+    min-height: 55px;
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left:0px;
     overflow: hidden;
     margin:0px;
   }

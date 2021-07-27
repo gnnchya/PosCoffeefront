@@ -139,18 +139,21 @@ function CreateMenu() {
                 <button className="v6_296" onClick={handleChangeIngredientInput}> </button>
             </div>
 
+            <div className="addname"> 
             {ingredients.length>0 && ingredients.map((ingredientItem, index) =>{
                 console.log("ingredient item", ingredientItem)
                 return (
-                    
-                    <div key={index} className="ingredient" >
-                        <input className="v6_282" type='text' name='ingredient[][ingredient_name]' defaultValue={ingredientItem} />
-                        <input className="v6_285" type='number' name='ingredient[][amount]' defaultValue={ingredientItem}/>
-                    </div>
+                        <div key={index} className="ingredientAdd" >
+                            <span className="v6_283">Name :</span>
+                            <input className="v6_282" type='text' name='ingredient[][ingredient_name]' defaultValue={ingredientItem} />
+                            <span className="v6_284">Amount :</span>
+                            <input className="v6_285" type='number' name='ingredient[][amount]' defaultValue={ingredientItem}/>
+                        </div>
                 )
             }
 
             )}
+            </div>
 
             <span className="v6_286">Price :</span>
                 <input className="v6_287" type='number' name='price' onChange={handleChangeInput} /*required="true"*//>
