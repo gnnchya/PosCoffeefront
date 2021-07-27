@@ -255,6 +255,7 @@
     height: 58px;
     background: rgba(245,201,88,1);
     border-radius: 10px;
+    border: none;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

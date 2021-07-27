@@ -428,7 +428,7 @@
     left: 13%;
     overflow: visible;
     grid-template-columns: 10% 10% 10% 10%;
-    grid-template-rows: 30% 30% 30%;
+    grid-template-rows: 32% 32% 32%;
     align-items: start;
     justify-content: space-between;
   }
