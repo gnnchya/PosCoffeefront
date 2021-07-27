@@ -37,7 +37,7 @@ function CreateMenu() {
                 avail = true
             }
             console.log("category to send", categories)
-            const temp = {...menu, price:+menu.price, available: avail, category:categories}
+            const temp = {...menu, price:+menu.price, available: avail, category:categories, ingredient:ingredients}
             const response = await createPost(temp)
             console.log("res",menu)
 
