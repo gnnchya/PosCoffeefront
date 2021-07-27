@@ -80,31 +80,7 @@ function CreateMenu() {
         setIngredients(test2)
     }
    
-    const addIngredient = (handleChangeInput) => {
-        try{
-            if(ingredientCount < 3){
-                var name = document.createElement("input");
-                var amount = document.createElement("input");
-            
-                name.setAttribute("type", "text")
-                amount.setAttribute("type", "number")
-            
-                name.setAttribute("class", "addname")
-                amount.setAttribute("class", "addAmount")
-            
-                name.setAttribute("name", "ingredient_name")
-                amount.setAttribute("name", "amount")
-            
-                name.onchange = {handleChangeInput}
-                amount.onchange = {handleChangeInput}
-            
-                document.getElementById("ingredient").appendChild(name);
-                document.getElementById("ingredient").appendChild(amount);
-            }
-            }catch (error){
-                alert(error)
-            }
-    }
+
 
     // console.log(category)
     return(
