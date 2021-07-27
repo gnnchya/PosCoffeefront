@@ -7,6 +7,7 @@ export default MenuInfo
 function MenuInfo() {
     const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState({})
+    const [cart, setCart] = useState({})
     useEffect(() => {
         getList()
     }, [])
@@ -24,10 +25,26 @@ function MenuInfo() {
         }
     }
 
+    const addCart = async (e) => {
+        try {
+            e.preventDefault()
+            const response = await addToCart(cart)
+            console.log(response.data.data)
+            // alert(response.data.data[0])
+            // if (response.status === 200) {
+            //     setCart(response.data.data || [])
+            // }
+        } catch (error) {
+            alert(error)
+        }
+    }
+
+
     const handleChangeInput = (e) => {
         const option = e.target.option
         const amount = e.target.amount
-        // setMenu((oldValue) => ({ ...oldValue, [name]: value }))
+        const value = e.target.value
+        setCart((oldValue) => ({ ...oldValue, [option]: value }))
         // if (name === 'title') {
         //     setTitle(value)
         // } else {
