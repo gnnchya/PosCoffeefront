@@ -399,7 +399,7 @@
     font-size: 30px;
     opacity: 1;
     text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
