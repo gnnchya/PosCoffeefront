@@ -26,9 +26,10 @@ function ShowCart(){
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"></Link><span className="v6_32">POS COFFEE</span>
-            <div class="v14_80">
-            <div class="v14_81"></div><span class="v14_82">Finish</span>
-        </div><span class="v14_83">POS COFEE</span><span class="v14_84">Name : </span>
+            <div class="v14_81">
+                <span class="v14_82">Finish</span>
+            </div>
+        <span class="v14_83">POS COFEE</span><span class="v14_84">Name : </span>
         <div class="v14_85"></div><span class="v17_136">Paid :</span>
         <div class="v17_137"></div><span class="v17_138">Method :</span>
         <div class="v17_139"></div><span class="v17_140">Type :</span>
