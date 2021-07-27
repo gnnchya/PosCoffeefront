@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from "react-router-dom";
-import {createPost, getMenu } from '../actions/posts'
+import {createPost, getAllMenu } from '../actions/posts'
 // import PostList from '../components/PostList'
 export default CreateMenu
 
@@ -15,7 +15,7 @@ function CreateMenu() {
     
     const getList = async (e) => {
         try {
-            const response = await getMenu()
+            const response = await getAllMenu()
             console.log(response.data.data)
             // alert(response.data.data[0])
             if (response.status === 200) {
