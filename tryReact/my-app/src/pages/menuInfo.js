@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
-import { createPost, getMenu, addToCart } from '../actions/posts'
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import { createPost, getEachMenu, addToCart } from '../actions/posts'
 // import PostList from '../components/PostList'
 export default MenuInfo
 
-function MenuInfo() {
+function MenuInfo(id) {
     const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState({})
     const [cart, setCart] = useState({})
@@ -14,11 +15,11 @@ function MenuInfo() {
 
     const getList = async (e) => {
         try {
-            const response = await getMenu()
+            const response = await getEachMenu(id)
             console.log(response.data.data)
             // alert(response.data.data[0])
             if (response.status === 200) {
-                setMenuItems(response.data.data || [])
+                setMenuItems(response.data.data)
             }
         } catch (error) {
             alert(error)
