@@ -31,7 +31,7 @@ function App() {
                 <Route exact path="/showMenu">
                     <ShowMenu />
                 </Route>
-                <Route exact path="/menuInfo/:id">
+                <Route exact path="/menuInfo/:id" >
                     <MenuInfo />
                 </Route>
                 <Route exact path="/showCart">

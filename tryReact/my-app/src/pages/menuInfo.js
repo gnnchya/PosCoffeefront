@@ -5,21 +5,21 @@ import { createPost, getEachMenu, addToCart } from '../actions/posts'
 // import PostList from '../components/PostList'
 export default MenuInfo
 
-function MenuInfo(id) {
+function MenuInfo() {
     const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState({})
     const [cart, setCart] = useState({})
     useEffect(() => {
         getList()
     }, [])
-
+    let {id} = useParams()
     const getList = async (e) => {
         try {
             const response = await getEachMenu(id)
             console.log(response.data.data)
             // alert(response.data.data[0])
             if (response.status === 200) {
-                setMenuItems(response.data.data)
+                setMenuItems(response.data.data || [])
             }
         } catch (error) {
             alert(error)
@@ -92,18 +92,15 @@ function MenuInfo(id) {
             <div class="v14_9">
                 <div class="v14_10"></div><span class="v14_11">Delete</span>
             </div>
-            {menuItem.map((item, index) => {
-                return (
                     <div>
-                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" key={index}>{item.name}</div>
-                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" key={index}>{item.price}</div>
+                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" >{menuItem.name}</div>
+                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" >{menuItem.price}</div>
                         <span className="v12_364">Description :</span>
                         <input className="v12_365" type='text' name='option' onChange={handleChangeInput} />
                         <span className="v12_366">Amount :</span>
                         <input className="v12_367" type='number' name='amount' onChange={handleChangeInput} />
                     </div>
-                )
-            })}
+                
         </div>
     )
 }
