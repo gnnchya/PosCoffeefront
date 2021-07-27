@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
-import { createPost, getMenu } from '../actions/posts'
+import { createPost, getMenu, addToCart } from '../actions/posts'
 // import PostList from '../components/PostList'
 export default MenuInfo
 
