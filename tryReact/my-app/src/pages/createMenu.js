@@ -138,14 +138,14 @@ function CreateMenu() {
                 <span className="v6_284">Amount :</span>
                 <input className="v6_285" type='number' name='amount'  onChange={(e) => setIngredient(e.target.value)} value={ingredient}/>
             </div>
-            
+
             {ingredients.length>0 && ingredients.map((ingredientItem, index) =>{
                 console.log("ingredient item", ingredientItem)
                 return (
                     
                     <div key={index} className="ingredient" >
-                        <input className="v6_282" type='text' name='ingredient_name' defaultValue={ingredientItem} />
-                        <input className="v6_285" type='number' name='amount' defaultValue={ingredientItem}/>
+                        <input className="v6_282" type='text' name='ingredient[][ingredient_name]' defaultValue={ingredientItem} />
+                        <input className="v6_285" type='number' name='ingredient[][amount]' defaultValue={ingredientItem}/>
                     </div>
                 )
             }
