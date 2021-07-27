@@ -55,64 +55,18 @@ function ShowMenu() {
                 <a href="#">❮</a>
                 <a href="#">❯</a>
             </div>
+            <div className='menu'>
             {menuItem.map((item, index) => {
                 return (
-                    <div>
+                    
                         <Link to="/menuInfo"><div className="v12_301">
                             <div className="v6_167"></div>
                             <div className="v6_168"></div><span className="v6_169" key={index}>{item.name}</span><span className="v6_170" key={index}>{item.price}</span>
                         </div></Link>
-                    </div>
+                    
                 )
             })}
-            {/* <Link to="/menuInfo"><div className="v12_301">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_304">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_302">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_303">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_305">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_308">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_306">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_307">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_310">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_313">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_311">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link>
-            <Link to="/menuInfo"><div className="v12_312">
-                <div className="v6_167"></div>
-                <div className="v6_168"></div><span className="v6_169">ICED LATTE</span><span className="v6_170">50 $</span>
-            </div></Link> */}
+           </div>
         </div>
     )
 }

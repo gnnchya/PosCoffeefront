@@ -418,6 +418,20 @@
     background-color: #ddd;
     border-radius: 5px;
   }
+
+  .menu{
+    display: grid;
+    width: 70%;
+    height: 65%;
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    overflow: visible;
+    grid-template-columns: 10% 10% 10% 10%;
+    grid-template-rows: 30% 30% 30%;
+    align-items: start;
+    justify-content: space-between;
+  }
   .v12_301 {
     width: 282px;
     height: 166px;
@@ -426,10 +440,12 @@
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    position: absolute;
-    top: 20%;
-    left: 15.5%;
+    position: relative;
+    top: 0%;
+    left: 0%;
     overflow: hidden;
+    margin-top: 20px;
+    margin-left: 30px;
   }
   .v6_73 {
     width: 282px;
