@@ -154,16 +154,19 @@ function CreateMenu() {
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
            
-            {/* <button className="test1" onClick={getList}>  
+            <button className="test1" onClick={getList}>  
                 {<span className="test2">GET list</span> }
             </button>
             <div className="testok">
                 {menuItem.map((item, index) => {
                     return(
+                        <div>
                         <h2 key={index} className="test3">{item.id}</h2>
+                        <h2 key={index} className="test3">{item.name}</h2>
+                        </div>
                     )
                 })}    
-            </div> */}
+            </div>
         </div>
     )
 }
