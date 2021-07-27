@@ -40,9 +40,9 @@ function App() {
                 <Route exact path="/createMenu">
                     <CreateMenu />
                 </Route>
-                <Route exact path="/showOrder">
+                {/* <Route exact path="/showOrder">
                     <ShowOrder />
-                </Route>
+                </Route> */}
             </Switch>
         </Router>
     )
