@@ -133,10 +133,10 @@ function CreateMenu() {
             <div className="ingredient" id="ingredient">  
                 <span className="v6_281">Ingredient :</span>
                 <span className="v6_283">Name :</span>
-                <button className="v6_296" onClick={handleChangeIngredientInput}> </button>
                 <input className="v6_282" type='text' name='ingredient_name' onChange={(e) => setIngredient(e.target.value)} value={ingredient} />
                 <span className="v6_284">Amount :</span>
                 <input className="v6_285" type='number' name='amount'  onChange={(e) => setIngredient(e.target.value)} value={ingredient}/>
+                <button className="v6_296" onClick={handleChangeIngredientInput}> </button>
             </div>
 
             {ingredients.length>0 && ingredients.map((ingredientItem, index) =>{

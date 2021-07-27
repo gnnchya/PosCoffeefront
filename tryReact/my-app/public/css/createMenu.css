@@ -358,12 +358,12 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
-    margin-top: 8px;
+    margin-top: 10px;
   }
   .v6_281 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: absolute;
+    position: relative;
     top: 2px;
     left: 0px;
     font-family: Marvel;
@@ -375,9 +375,9 @@
   .v6_283 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: absolute;
+    position: relative;
     top: 2px;
-    left: 40px;
+    left: 50px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -397,7 +397,7 @@
     opacity: 1;
     position: relative;
     top: 3px;
-    left: 532px;
+    left: 60px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -431,9 +431,9 @@
   .v6_284 {
     width: 124px;
     color: rgba(0,0,0,1);
-    position: absolute;
+    position: relative;
     top: 2px;
-    left: 30px;
+    left: 80px;
     font-family: Marvel;
     font-weight: Bold;
     font-size: 30px;
@@ -453,7 +453,7 @@
     opacity: 1;
     position: relative;
     top: 3px;
-    left: 987px;
+    left: 90px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -474,7 +474,7 @@
     opacity: 1;
     position: relative;
     top: 3px;
-    left: 365px;
+    left: 500px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -482,7 +482,6 @@
     overflow: hidden;
     margin-top: 10px;
   }
-
   .v6_286 {
     width: 80px;
     color: rgba(0,0,0,1);
@@ -574,7 +573,7 @@
     opacity: 1;
     position: relative;
     top: 12px;
-    left: 648px;
+    left: 110px;
     overflow: hidden;
     border-radius: 50%;
   }
