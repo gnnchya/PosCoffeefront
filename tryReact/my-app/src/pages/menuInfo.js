@@ -29,7 +29,8 @@ function MenuInfo() {
     const addCart = async (e) => {
         try {
             e.preventDefault()
-            const response = await addToCart(cart)
+            const cartData = {...cart, id: menuItem.id }
+            const response = await addToCart(cartData)
             console.log(response.data.data)
             // alert(response.data.data[0])
             // if (response.status === 200) {
@@ -91,8 +92,8 @@ function MenuInfo() {
                 <div class="v14_10"></div><span class="v14_11">Delete</span>
             </div>
                     <div>
-                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" onChange={handleChangeInput}>{menuItem.name}</div>
-                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" onChange={handleChangeInput}>{menuItem.price}</div>
+                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" >{menuItem.name}</div>
+                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" >{menuItem.price}</div>
                         <span className="v12_364">Description :</span>
                         <input className="v12_365" type='text' name='option' onChange={handleChangeInput} />
                         <span className="v12_366">Amount :</span>
