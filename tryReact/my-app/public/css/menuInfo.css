@@ -378,6 +378,7 @@
     font-size: 25px;
     border: none;
     padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -501,6 +502,7 @@
     font-size: 25px;
     border: none;
     padding-left: 10px;
+
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -560,6 +562,7 @@
     font-size: 25px;
     border: none;
     padding-left: 10px;
+    padding-top: 5px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -593,6 +596,8 @@
     font-size: 25px;
     border: none;
     padding-left: 10px;
+    padding-top: 5px;
+
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
