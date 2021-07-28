@@ -14,7 +14,7 @@ function HomePage() {
             {/*<form action="https://google.com">*/}
             {/*    <input type="submit" value="Go to Google" />*/}
             {/*</form>*/}
-            <Link to="/showMenu/1"><div className="v6_14">MENU</div></Link>
+            <Link to="/showMenu?page=1"><div className="v6_14">MENU</div></Link>
             <Link to="/showOrder"><span className="v6_15">ORDER</span></Link>
             <Link to="/showMoney"><span className="v6_19">MONEY</span></Link>
             <Link to="/showStock"><span className="v6_20">STOCK</span></Link>
