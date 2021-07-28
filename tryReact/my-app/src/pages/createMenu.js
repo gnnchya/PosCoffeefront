@@ -133,7 +133,7 @@ function CreateMenu() {
             </div></Link>
             <div className="v6_12"></div>
             <span className="v6_13">SHOP</span>
-            <Link to="/showMenu?page=1"><div className="v6_14">MENU</div></Link>            
+            <Link to="/showMenu/1"><div className="v6_14">MENU</div></Link>
             <Link to="/showOrder"><span className="v6_15">ORDER</span></Link>
             <Link to="/showMoney"><span className="v6_19">MONEY</span></Link>
             <Link to="/showStock"><span className="v6_20">STOCK</span></Link>

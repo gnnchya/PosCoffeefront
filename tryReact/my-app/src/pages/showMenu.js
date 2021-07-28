@@ -6,11 +6,12 @@ import { createPost, getAllMenu } from '../actions/posts'
 
 function ShowMenu() {
     let limit = 12
-    var url = new URL(window.location.href)
-    let page = url.searchParams.get("page")
-    if (Number(page) == 0){
-        let {page} = "1"
-    }
+    let {page} = useParams()
+    // var url = new URL(window.location.href)
+    // let page = url.searchParams.get("page")
+    // if (Number(page) == 0){
+    //     page = "1"
+    // }
     const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState({})
     useEffect(() => {
@@ -39,6 +40,16 @@ function ShowMenu() {
       }
     }
 
+    function pageLeft(page)
+    {
+        if (page == 0){
+            return 1
+        }
+
+        return page
+    }
+
+
     return (
         <div className="v1_3">
             <div className="v6_3"></div>
@@ -52,7 +63,7 @@ function ShowMenu() {
             {/*<form action="https://google.com">*/}
             {/*    <input type="submit" value="Go to Google" />*/}
             {/*</form>*/}
-            <Link to="/showMenu?page=1"><div className="v6_14">MENU</div></Link>
+            <Link to="/showMenu/1"><div className="v6_14">MENU</div></Link>
             <Link to="/showOrder"><span className="v6_15">ORDER</span></Link>
             <Link to="/showMoney"><span className="v6_19">MONEY</span></Link>
             <Link to="/showStock"><span className="v6_20">STOCK</span></Link>
@@ -70,8 +81,13 @@ function ShowMenu() {
             <div className="pagination">
                 {/* <Link onClick={reloadCss} to={{pathname:`/showMenu/${Number(page)-1}`}}>❮</Link>
                 <Link onClick={reloadCss} to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Link> */}
-                <Link to={{pathname:`/showMenu?page=${Number(page)-1}`}} >❮</Link>
-                <Link to={{pathname:`/showMenu?page=${Number(page)+1}`}} >❯</Link>
+
+                <Link  to={{pathname:`/showMenu/${pageLeft(Number(page-1))}`}}>❮</Link>
+                <Link  to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Link>
+
+                {/* <Link to={{pathname:`/showMenu?page=${pageLeft(Number(page-1))}`}} >❮</Link>
+                <Link to={{pathname:`/showMenu?page=${Number(page)+1}`}} >❯</Link> */}
+
             </div>
             <div className='menu'>
             {menuItem.map((item, index) => {
