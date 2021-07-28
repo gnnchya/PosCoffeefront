@@ -13,18 +13,17 @@ function CreateMenu() {
     const [ingredients, setIngredients] = useState([])
     const [itemName, setItemName] = useState("")
     const [amount, setAmount] = useState("")
+    const [available, setAvailable] = useState(false)
 
 
-    
+
     const addClick = async (e) => {
         try {
             e.preventDefault()
             var avail = false
-            if (menu.available == "on"){
-                avail = true
-            }
+ 
             console.log("category to send", categories)
-            const temp = {...menu, price:+menu.price, available: avail, category:categories, ingredient:ingredients}
+            const temp = {...menu, price:+menu.price, category:categories, ingredient:ingredients}
             const response = await createPost(temp)
             console.log("res",menu)
 
@@ -54,13 +53,13 @@ function CreateMenu() {
         let test = [...categories, category]
         console.log("category", category)
         console.log("categories", categories)
-        console.log("2", test)
         setCategories(test)
     }
 
     const handleChangeIngredientInput = (e) =>{
         e.preventDefault()
-        let test2 = [...ingredients, itemName, amount]
+        const tempIngredientObject = {item_name: itemName, amount: amount}
+        let test2 = [...ingredients, tempIngredientObject]
         setIngredients(test2)
     }
    
@@ -103,13 +102,13 @@ function CreateMenu() {
 
             <div className="addname"> 
             {ingredients.length>0 && ingredients.map((ingredientItem, index) =>{
-                console.log("ingredient item", ingredientItem)
+                console.log("ingredient item", ingredientItem.amount)
                 return (
                         <div key={index} className="ingredientAdd" >
                             <span className="v6_283">Name :</span>
-                            <input className="v6_282" type='text' />
+                            <input className="v6_282" type='text' defaultValue={ingredientItem.item_name}/>
                             <span className="v6_284">Amount :</span>
-                            <input className="v6_285" type='number' />
+                            <input className="v6_285" type='number' defaultValue={ingredientItem.amount} />
                         </div>
                 )
             }
@@ -120,7 +119,7 @@ function CreateMenu() {
             <span className="v6_286">Price :</span>
                 <input className="v6_287" type='number' name='price' onChange={handleChangeInput} /*required="true"*//>
             <span className="v6_288">Available :</span>
-                <input className="v6_289" type='checkbox' name='available' onChange={handleChangeInput} />
+                <input className="v6_289" type='checkbox' name='available' onChange={(e) => setAvailable(e.currentTarget.checked)} />
             <button className="v6_192" onClick={addClick}>  
                 {<span className="v6_194">Create Menu</span> }
             </button>
