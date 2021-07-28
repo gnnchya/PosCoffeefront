@@ -36,7 +36,7 @@ function ShowMenu() {
     var links = document.getElementsByName("showMenu");
     for (var link of links) {
         // link.href = "./css/showMenu"
-        link.href = "./css/showMenu".replace(/\?.*|$/, "?v=" + Date.now())
+        link.href = "./css/showMenu".replace(/\?.*|$/, "?v={" + Date.now() + "}")
       }
     }
 
@@ -79,7 +79,7 @@ function ShowMenu() {
                 <div className="v6_60"></div><span className="v6_61">Create Menu</span>
             </div></Link>
             <div className="pagination">
-                {/* <Link onClick={reloadCss} to={{pathname:`/showMenu/${Number(page)-1}`}}>❮</Link>
+                {/* <Link onClick={reloadCss} to={{pathname:`/showMenu/${pageLeft(Number(page-1))}`}}>❮</Link>
                 <Link onClick={reloadCss} to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Link> */}
 
                 <Link  to={{pathname:`/showMenu/${pageLeft(Number(page-1))}`}}>❮</Link>
