@@ -11,24 +11,11 @@ function CreateMenu() {
     const [categories, setCategories] = useState([])
     const [category, setCategory] = useState("")
     const [ingredients, setIngredients] = useState([])
-    const [ingredient, setIngredient] = useState("")
-    // useEffect(() => {
-    //     getList()
-    //   }, [])
-    
-    // const getList = async (e) => {
-    //     try {
-    //         const response = await getMenu()
-    //         console.log(response.data.data)
-    //         // alert(response.data.data[0])
-    //         if (response.status === 200) {
-    //             setMenuItems(response.data.data || [])
-    //         }
-    //     } catch (error) {
-    //       alert(error)
-    //     }
-    // }
+    const [itemName, setItemName] = useState("")
+    const [amount, setAmount] = useState("")
 
+
+    
     const addClick = async (e) => {
         try {
             e.preventDefault()
@@ -73,10 +60,7 @@ function CreateMenu() {
 
     const handleChangeIngredientInput = (e) =>{
         e.preventDefault()
-        let test2 = [...ingredients, ingredient]
-        console.log("ingredient", ingredient)
-        console.log("ingredients", ingredients)
-        console.log("2", test2)
+        let test2 = [...ingredients, itemName, amount]
         setIngredients(test2)
     }
    
@@ -91,6 +75,7 @@ function CreateMenu() {
                 <input className="v6_277" type='text' name='name' onChange={handleChangeInput} />
                 <span className="v6_278">Category :</span>
                 <div className="category" id="category1">
+                {/* <input className="v6_279" type='text' name='category'  onChange={(e) => setCategory(e.target.value)} value={category}/> */}
                 <input className="v6_279" type='text' name='category'  onChange={(e) => setCategory(e.target.value)} value={category}/>
                 <button className="v6_295" onClick={handleChangeCategoryInput}></button >
             </div>
@@ -110,9 +95,9 @@ function CreateMenu() {
             <div className="ingredient" id="ingredient">  
                 <span className="v6_281">Ingredient :</span>
                 <span className="v6_283">Name :</span>
-                <input className="v6_282" type='text' name='ingredient_name' onChange={(e) => setIngredient(e.target.value)} value={ingredient} />
+                <input className="v6_282" type='text' name='item_name' onChange={(e) => setItemName(e.target.value)} value={itemName} />
                 <span className="v6_284">Amount :</span>
-                <input className="v6_285" type='number' name='amount'  onChange={(e) => setIngredient(e.target.value)} value={ingredient}/>
+                <input className="v6_285" type='number' name='amount'  onChange={(e) => setAmount(e.target.value)} value={amount}/>
                 <button className="v6_296" onClick={handleChangeIngredientInput}> </button>
             </div>
 
@@ -122,9 +107,9 @@ function CreateMenu() {
                 return (
                         <div key={index} className="ingredientAdd" >
                             <span className="v6_283">Name :</span>
-                            <input className="v6_282" type='text' name='ingredient[][ingredient_name]' defaultValue={ingredientItem} />
+                            <input className="v6_282" type='text' />
                             <span className="v6_284">Amount :</span>
-                            <input className="v6_285" type='number' name='ingredient[][amount]' defaultValue={ingredientItem}/>
+                            <input className="v6_285" type='number' />
                         </div>
                 )
             }

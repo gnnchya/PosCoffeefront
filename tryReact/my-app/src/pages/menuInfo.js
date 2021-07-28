@@ -99,7 +99,6 @@ function MenuInfo() {
                         <span className="v12_366">Amount :</span>
                         <input className="v12_367" type='number' name='amount' onChange={handleChangeInput} />
                     </div>
-                
         </div>
     )
 }
