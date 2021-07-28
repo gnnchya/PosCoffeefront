@@ -5,8 +5,7 @@ import {createPost, getMenu } from '../actions/posts'
 export default CreateMenu
 
 function CreateMenu() {
-    var ingredientCount = 0;
-    const [menuItem, setMenuItems] = useState([])
+
     const [menu, setMenu] = useState({})
     const [categories, setCategories] = useState([])
     const [category, setCategory] = useState("")
@@ -20,26 +19,20 @@ function CreateMenu() {
     const addClick = async (e) => {
         try {
             e.preventDefault()
-            if (category){
-                setCategories([...categories, category], async() => {
-                    const temp = {...menu, price:+menu.price, category:categories, ingredient:ingredients, available:available}
-                    const response = await createPost(temp)
-                    console.log(response)
-                })
-            }
-            else{
-                const temp = {...menu, price:+menu.price, category:categories, ingredient:ingredients, available:available}
-                const response = await createPost(temp)
-                console.log(response)
-            }
- 
-           
+            const tempIngredients ={item_name:itemName, amount: +amount}
+            const temp = {...menu, price:+menu.price, category:[...categories, category], ingredient:[...ingredients, tempIngredients], available:available}
+            const response = await createPost(temp)
+            console.log(response)
+            
 
-        //   if (response.status === 201) {
-        //     getList()
-        //   }
+            if (response.status === 201) {
+                console.log("create", response)
+            }
         } catch (error) {
-          alert(error)
+            if (error.status === 422){
+                alert("422")
+            }
+            alert(error)
         }
       }
 
@@ -48,28 +41,23 @@ function CreateMenu() {
         const name = e.target.name
         const value = e.target.value
         setMenu((oldValue) => ({ ...oldValue, [name]: value }))
-        // if (name === 'title') {
-        //     setTitle(value)
-        // } else {
-        //     setBody(value)
-        //     setCategory(category)
-        // }
 
     }
     const handleChangeCategoryInput = (e) =>{
 
         e.preventDefault()
         let test = [...categories, category]
-        console.log("category", category)
-        console.log("categories", categories)
         setCategories(test)
+        setCategory("")
     }
 
     const handleChangeIngredientInput = (e) =>{
         e.preventDefault()
-        const tempIngredientObject = {item_name: itemName, amount: amount}
+        const tempIngredientObject = {item_name: itemName, amount: +amount}
         let test2 = [...ingredients, tempIngredientObject]
         setIngredients(test2)
+        setAmount("")
+        setItemName("")
     }
    
 
