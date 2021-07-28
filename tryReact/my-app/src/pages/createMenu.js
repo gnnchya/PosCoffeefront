@@ -20,12 +20,20 @@ function CreateMenu() {
     const addClick = async (e) => {
         try {
             e.preventDefault()
-            var avail = false
+            if (category){
+                setCategories([...categories, category], async() => {
+                    const temp = {...menu, price:+menu.price, category:categories, ingredient:ingredients, available:available}
+                    const response = await createPost(temp)
+                    console.log(response)
+                })
+            }
+            else{
+                const temp = {...menu, price:+menu.price, category:categories, ingredient:ingredients, available:available}
+                const response = await createPost(temp)
+                console.log(response)
+            }
  
-            console.log("category to send", categories)
-            const temp = {...menu, price:+menu.price, category:categories, ingredient:ingredients}
-            const response = await createPost(temp)
-            console.log("res",menu)
+           
 
         //   if (response.status === 201) {
         //     getList()
@@ -49,6 +57,7 @@ function CreateMenu() {
 
     }
     const handleChangeCategoryInput = (e) =>{
+
         e.preventDefault()
         let test = [...categories, category]
         console.log("category", category)
@@ -84,22 +93,22 @@ function CreateMenu() {
             })}
 
             <div className="category" id="category1">
-                    {/* <input className="v6_279" type='text' name='category'  onChange={(e) => setCategory(e.target.value)} value={category}/> */}
-                    <input className="v6_279" type='text' name='category'  onChange={(e) => setCategory(e.target.value)} value={category}/>
-                    <button className="v6_295" onClick={handleChangeCategoryInput}></button >
-                 </div>
+                {/* <input className="v6_279" type='text' name='category'  onChange={(e) => setCategory(e.target.value)} value={category}/> */}
+                <input className="v6_279" type='text' name='category'  onChange={(e) => setCategory(e.target.value)} value={category}/>
+                <button className="v6_295" onClick={handleChangeCategoryInput}></button >
+            </div>
           
             
-                 <div className="addname"> 
+            <div className="addname"> 
             {ingredients.length>0 && ingredients.map((ingredientItem, index) =>{
                 console.log("ingredient item", ingredientItem.amount)
                 return (
-                        <div key={index} className="ingredientAdd" >
-                            <span className="v6_283">Name :</span>
-                            <input className="v6_282" type='text' defaultValue={ingredientItem.item_name}/>
-                            <span className="v6_284">Amount :</span>
-                            <input className="v6_285" type='number' defaultValue={ingredientItem.amount} />
-                        </div>
+                    <div key={index} className="ingredientAdd" >
+                        <span className="v6_283">Name :</span>
+                        <input className="v6_282" type='text' defaultValue={ingredientItem.item_name}/>
+                        <span className="v6_284">Amount :</span>
+                        <input className="v6_285" type='number' defaultValue={ingredientItem.amount} />
+                    </div>
                 )
             }
 
@@ -136,7 +145,7 @@ function CreateMenu() {
             </div></Link>
             <div className="v6_12"></div>
             <span className="v6_13">SHOP</span>
-            <Link to="/showMenu/1"><div className="v6_14">MENU</div></Link>
+            <Link to="/showMenu?page=1"><div className="v6_14">MENU</div></Link>            
             <Link to="/showOrder"><span className="v6_15">ORDER</span></Link>
             <Link to="/showMoney"><span className="v6_19">MONEY</span></Link>
             <Link to="/showStock"><span className="v6_20">STOCK</span></Link>
@@ -149,19 +158,6 @@ function CreateMenu() {
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
            
-            {/* <button className="test1" onClick={getList}>  
-                {<span className="test2">GET list</span> }
-            </button>
-            <div className="testok">
-                {menuItem.map((item, index) => {
-                    return(
-                        <div>
-                        <h2 key={index} className="test3">{item.id}</h2>
-                        <h2 key={index} className="test3">{item.name}</h2>
-                        </div>
-                    )
-                })}    
-            </div> */}
         </div>
     )
 }
