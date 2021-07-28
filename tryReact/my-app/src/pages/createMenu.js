@@ -29,9 +29,9 @@ function CreateMenu() {
                 console.log("create", response)
             }
         } catch (error) {
-            if (error.status === 422){
-                alert("422")
-            }
+            // if (error.status === 422){
+            //     alert("422")
+            // }
             alert(error)
         }
       }
