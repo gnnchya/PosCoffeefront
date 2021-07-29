@@ -1,7 +1,10 @@
-import React from "react"
 import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import {createPost, getMenu, putMenu } from '../actions/posts'
 
 function UpdateMenu() {
+
     const [menu, setMenu] = useState({})
     const [categories, setCategories] = useState([])
     const [category, setCategory] = useState("")
@@ -16,7 +19,7 @@ function UpdateMenu() {
             e.preventDefault()
             const tempIngredients ={item_name:itemName, amount: +amount}
             const temp = {...menu, price:+menu.price, category:[...categories, category], ingredient:[...ingredients, tempIngredients], available:available}
-            const response = await createPost(temp)
+            const response = await putMenu(temp)
             console.log(response)
             
 

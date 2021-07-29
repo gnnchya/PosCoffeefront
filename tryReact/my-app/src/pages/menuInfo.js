@@ -30,7 +30,7 @@ function MenuInfo() {
         try {
             e.preventDefault()
             const cartData = {...cart, id: menuItem.id }
-            const response = await addToCart(cartData)
+            const response = await addToCart(id,cartData)
             console.log(response.data.data)
             // alert(response.data.data[0])
             // if (response.status === 200) {
