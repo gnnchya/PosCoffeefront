@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
-function HomePage() {
+function OrderInfo() {
     return (
         <div className="v1_3">
             <div className="v6_3"></div>
@@ -58,4 +58,4 @@ function HomePage() {
     )
 }
 
-export default HomePage
+export default OrderInfo

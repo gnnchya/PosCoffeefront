@@ -16,6 +16,8 @@ import UpdateMenu from './pages/updateMenu';
 import CreateMenu from './pages/createMenu';
 import ShowOrder from './pages/showOrder';
 import ChangeBill from './pages/changeBill'
+import ShowHistory from './pages/showHistory'
+import OrderInfo from './pages/orderInfo'
 import React, { Component }  from 'react';
 import TestAxios from './pages/testAxios';
 
@@ -51,6 +53,12 @@ function App() {
                 </Route>
                 <Route exact path="/changeBill">
                     <ChangeBill />
+                </Route>
+                <Route exact path="/showHistory">
+                    <ShowHistory />
+                </Route>
+                <Route exact path="/orderInfo">
+                    <OrderInfo />
                 </Route>
             </Switch>
         </Router>
