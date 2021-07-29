@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { FinishCart } from "../actions/posts";
+import data from "../pages/showCart";
 
 function ChangeBill() {
     let { id } = useParams()
@@ -9,7 +10,7 @@ function ChangeBill() {
 
     const getList = async (e) => {
         try {
-            const response = await FinishCart(id, location.data)
+            const response = await FinishCart(id, data)
             console.log(response.data.data)
             // alert(response.data.data[0])
             if (response.status === 200) {

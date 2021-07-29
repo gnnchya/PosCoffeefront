@@ -6,7 +6,8 @@ function ShowCart() {
     const [menuItem, setMenuItems] = useState([])
 
     const [cart, setCart] = useState({})
-
+    const id = "pondnarawich"
+    const data = "pondnarawich"
     const getList = async (e) => {
         try {
             const response = await getCart(id)
@@ -20,11 +21,11 @@ function ShowCart() {
         }
     }
 
-    cart => setMenuItems(cart.Menu)
+    // cart => setMenuItems(cart.Menu)
     const handleChangeInput = (e) => {
         const name = e.target.name
         const value = e.target.value
-        setMenu((oldValue) => ({ ...oldValue, [name]: value }))
+        setMenuItems((oldValue) => ({ ...oldValue, [name]: value }))
 
     }
     return (
