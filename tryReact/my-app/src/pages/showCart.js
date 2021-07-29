@@ -3,18 +3,24 @@ import { Link } from "react-router-dom";
 import { getCart } from "../actions/posts";
 
 function ShowCart() {
+    const [menuItem, setMenuItems] = useState([])
+
+    const [cart, setCart] = useState({})
+
     const getList = async (e) => {
         try {
             const response = await getCart(id)
             console.log(response.data.data)
             // alert(response.data.data[0])
             if (response.status === 200) {
-                setMenuItems(response.data.data || [])
+                setCart(response.data.data || {})
             }
         } catch (error) {
             alert(error)
         }
     }
+
+    cart => setMenuItems(cart.Menu)
     const handleChangeInput = (e) => {
         const name = e.target.name
         const value = e.target.value
@@ -45,13 +51,17 @@ function ShowCart() {
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
 
             <div className="orderArea">
+            {menuItem.map((item, index) => {
+                return (
                 <div className="orders">
-                    <span class="v14_84">Name : </span>
-                    <div class="v14_85"></div><span class="v14_86">Description :</span>
-                    <div class="v14_87"></div><span class="v17_112">Price :</span>
-                    <div class="v17_113"></div><span class="v17_106">Amount :</span>
-                    <div class="v17_107"></div>
+                    <span class="v14_84">Name : </span><div class="v14_85" key={index}>{item.name}</div>
+                    <span class="v14_86">Description :</span><div class="v14_87" key={index}>{item.option}</div>
+                    <span class="v17_112">Price :</span><div class="v17_113" key={index}>{item.price}</div>
+                    <span class="v17_106">Amount :</span><div class="v17_107" key={index}>{item.amount}</div>
+                    
                 </div>
+                )
+            })}
             </div>
 
 
