@@ -102,13 +102,8 @@ function MenuInfo() {
                 <div className="v14_10"></div><span className="v14_11">Delete</span>
             </div>
                     <div>
-<<<<<<< Updated upstream
                         <span className="v12_342">Name : </span><div className="v12_343" name = "name" >{menuItem.name}</div>
                         <span className="v12_351">Price :</span><div className="v12_352" name = "price" >{menuItem.price}</div>
-=======
-                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" >{menuItem.name}</div>
-                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" >{menuItem. price}</div>
->>>>>>> Stashed changes
                         <span className="v12_364">Description :</span>
                         <input className="v12_365" type='text' name='option' onChange={(e) => setDescription(e.target.value)} />
                         <span className="v12_366">Amount :</span>
