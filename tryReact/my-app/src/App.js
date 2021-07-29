@@ -12,6 +12,7 @@ import HomePage from './pages/homePage';
 import ShowMenu from './pages/showMenu';
 import MenuInfo from './pages/menuInfo';
 import ShowCart from './pages/showCart';
+import UpdateMenu from './pages/updateMenu';
 import CreateMenu from './pages/createMenu'
 import ShowOrder from './pages/showOrder'
 import React, { Component }  from 'react';
@@ -43,6 +44,9 @@ function App() {
                 </Route>
                 <Route exact path="/showOrder">
                     <ShowOrder />
+                </Route>
+                <Route exact path="/updateMenu/:id">
+                    <UpdateMenu />
                 </Route>
             </Switch>
         </Router>
