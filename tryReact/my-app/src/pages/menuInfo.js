@@ -34,26 +34,16 @@ function MenuInfo() {
         try {
             e.preventDefault()
             console.log("menuItem", menuItem)
-            const temp = {id:menuItem.id, category: menuItem.category, name:menuItem.name, ingredient:menuItem.ingredient, price:+menuItem.price, available:menuItem.available, amount:+amount, option:description}
-            // setMenu(temp).then(()=> {
-            //     const cartData = {...cart, menu}
-            //     console.log("temp", temp)
-            //     console.log("menu", menu)
-            //     setCart(cartData).then(()=> {
-            //         const response = await addToCart(id, temp)
-            //         console.log(response.data.data)
-            //     })
-            // })
-            let test = [...menu]
-            test = menu.push(temp)
-            console.log("temp", temp)
-            console.log("menu", menu)
-            const cartData = {id: id, menu: menu}
+            const temp = {_id:menuItem.id, category: menuItem.category, name:menuItem.name, ingredient:menuItem.ingredient, price:+menuItem.price, available:menuItem.available, amount:+amount, option:description}
+
+            let tempMenu = [...menu]
+            tempMenu = menu.push(temp)
+            const cartData = {_id: id, customer_id: "test", menu: menu}
             let test2 = [...cart]
             test2 = cart.push(cartData)
             // setCart(cartData)
             console.log("cart", cart)
-            const response = await addToCart(id, cart)
+            const response = await addToCart(id, cart[0])
             console.log(response.data.data)
             // alert(response.data.data[0])
             // if (response.status === 200) {
