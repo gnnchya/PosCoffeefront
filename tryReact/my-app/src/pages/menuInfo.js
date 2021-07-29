@@ -15,7 +15,7 @@ function MenuInfo() {
     useEffect(() => {
         getList()
     }, [])
-    let { id } = useParams()
+    let {id} = useParams()
     const getList = async (e) => {
         try {
             const response = await getEachMenu(id)
@@ -34,26 +34,16 @@ function MenuInfo() {
         try {
             e.preventDefault()
             console.log("menuItem", menuItem)
-            const temp = { id: menuItem.id, category: menuItem.category, name: menuItem.name, ingredient: menuItem.ingredient, price: +menuItem.price, available: menuItem.available, amount: +amount, option: description }
-            // setMenu(temp).then(()=> {
-            //     const cartData = {...cart, menu}
-            //     console.log("temp", temp)
-            //     console.log("menu", menu)
-            //     setCart(cartData).then(()=> {
-            //         const response = await addToCart(id, temp)
-            //         console.log(response.data.data)
-            //     })
-            // })
-            let test = [...menu]
-            test = menu.push(temp)
-            console.log("temp", temp)
-            console.log("menu", menu)
-            const cartData = { id: id, menu: menu }
+            const temp = {_id:menuItem.id, category: menuItem.category, name:menuItem.name, ingredient:menuItem.ingredient, price:+menuItem.price, available:menuItem.available, amount:+amount, option:description}
+
+            let tempMenu = [...menu]
+            tempMenu = menu.push(temp)
+            const cartData = {_id: id, customer_id: "test", menu: menu}
             let test2 = [...cart]
             test2 = cart.push(cartData)
             // setCart(cartData)
             console.log("cart", cart)
-            const response = await addToCart(id, cart)
+            const response = await addToCart({id:id, menu:cart})
             console.log(response.data.data)
             // alert(response.data.data[0])
             // if (response.status === 200) {
@@ -92,7 +82,7 @@ function MenuInfo() {
             <button className="v12_338">
 
                 < div className="v12_339" onClick={addCart}>
-                    <span className="v12_340">Add to cart</span>
+                <span className="v12_340">Add to cart</span>
                 </ div>
             </button>
             <Link to="/updateMenu"><div className="v14_6">
@@ -101,14 +91,14 @@ function MenuInfo() {
             <div className="v14_9">
                 <div className="v14_10"></div><span className="v14_11">Delete</span>
             </div>
-            <div>
-                <span className="v12_342">Name : </span><div className="v12_343" name="name" >{menuItem.name}</div>
-                <span className="v12_351">Price :</span><div className="v12_352" name="price" >{menuItem.price}</div>
-                <span className="v12_364">Description :</span>
-                <input className="v12_365" type='text' name='option' onChange={(e) => setDescription(e.target.value)} />
-                <span className="v12_366">Amount :</span>
-                <input className="v12_367" type='number' name='amount' onChange={(e) => setAmount(e.target.value)} />
-            </div>
+                    <div>
+                        <span className="v12_342">Name : </span><div className="v12_343" name = "name" >{menuItem.name}</div>
+                        <span className="v12_351">Price :</span><div className="v12_352" name = "price" >{menuItem.price}</div>
+                        <span className="v12_364">Description :</span>
+                        <input className="v12_365" type='text' name='option' onChange={(e) => setDescription(e.target.value)} />
+                        <span className="v12_366">Amount :</span>
+                        <input className="v12_367" type='number' name='amount' onChange={(e) => setAmount(e.target.value)} />
+                    </div>
         </div>
     )
 }
