@@ -13,8 +13,9 @@ import ShowMenu from './pages/showMenu';
 import MenuInfo from './pages/menuInfo';
 import ShowCart from './pages/showCart';
 import UpdateMenu from './pages/updateMenu';
-import CreateMenu from './pages/createMenu'
-import ShowOrder from './pages/showOrder'
+import CreateMenu from './pages/createMenu';
+import ShowOrder from './pages/showOrder';
+import ChangeBill from './pages/changeBill'
 import React, { Component }  from 'react';
 import TestAxios from './pages/testAxios';
 
