@@ -48,6 +48,9 @@ function App() {
                 <Route exact path="/updateMenu/:id">
                     <UpdateMenu />
                 </Route>
+                <Route exact path="/changeBill">
+                    <ChangeBill />
+                </Route>
             </Switch>
         </Router>
     )
