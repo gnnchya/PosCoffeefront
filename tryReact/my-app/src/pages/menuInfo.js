@@ -43,7 +43,7 @@ function MenuInfo() {
             test2 = cart.push(cartData)
             // setCart(cartData)
             console.log("cart", cart)
-            const response = await addToCart(id, cart[0])
+            const response = await addToCart({id:id, menu:cart})
             console.log(response.data.data)
             // alert(response.data.data[0])
             // if (response.status === 200) {
