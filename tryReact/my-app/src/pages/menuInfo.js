@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import testUtils from 'react-dom/test-utils';
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { createPost, getEachMenu, addToCart } from '../actions/posts'
@@ -7,8 +8,10 @@ export default MenuInfo
 
 function MenuInfo() {
     const [menuItem, setMenuItems] = useState([])
-    const [menu, setMenu] = useState({})
-    const [cart, setCart] = useState({})
+    const [menu, setMenu] = useState([])
+    const [description, setDescription] = useState("")
+    const [amount, setAmount] = useState()
+    const [cart, setCart] = useState([])
     useEffect(() => {
         getList()
     }, [])
@@ -21,6 +24,7 @@ function MenuInfo() {
             if (response.status === 200) {
                 setMenuItems(response.data.data || [])
             }
+
         } catch (error) {
             alert(error)
         }
@@ -29,8 +33,27 @@ function MenuInfo() {
     const addCart = async (e) => {
         try {
             e.preventDefault()
-            const cartData = {...cart, id: menuItem.id }
-            const response = await addToCart(id,cartData)
+            console.log("menuItem", menuItem)
+            const temp = {id:menuItem.id, category: menuItem.category, name:menuItem.name, ingredient:menuItem.ingredient, price:+menuItem.price, available:menuItem.available, amount:+amount, option:description}
+            // setMenu(temp).then(()=> {
+            //     const cartData = {...cart, menu}
+            //     console.log("temp", temp)
+            //     console.log("menu", menu)
+            //     setCart(cartData).then(()=> {
+            //         const response = await addToCart(id, temp)
+            //         console.log(response.data.data)
+            //     })
+            // })
+            let test = [...menu]
+            test = menu.push(temp)
+            console.log("temp", temp)
+            console.log("menu", menu)
+            const cartData = {id: id, menu: menu}
+            let test2 = [...cart]
+            test2 = cart.push(cartData)
+            // setCart(cartData)
+            console.log("cart", cart)
+            const response = await addToCart(id, cart)
             console.log(response.data.data)
             // alert(response.data.data[0])
             // if (response.status === 200) {
@@ -41,19 +64,6 @@ function MenuInfo() {
         }
     }
 
-
-    const handleChangeInput = (e) => {
-        const name = e.target.name
-        const value = e.target.value
-        setCart((oldValue) => ({ ...oldValue, [name]: value }))
-        // if (name === 'title') {
-        //     setTitle(value)
-        // } else {
-        //     setBody(value)
-        //     setCategory(category)
-        // }
-
-    }
     return (
         <div className="v1_3">
             <div className="v6_3"></div>
@@ -79,25 +89,25 @@ function MenuInfo() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
-            <button class="v12_338">
+            <button className="v12_338">
 
-                < div class="v12_339" onClick={addCart}>
-                <span class="v12_340">Add to cart</span>
+                < div className="v12_339" onClick={addCart}>
+                <span className="v12_340">Add to cart</span>
                 </ div>
             </button>
-            <Link to="/updateMenu"><div class="v14_6">
-                <div class="v14_7"></div><span class="v14_8">Update</span>
+            <Link to="/updateMenu"><div className="v14_6">
+                <div className="v14_7"></div><span className="v14_8">Update</span>
             </div></Link>
-            <div class="v14_9">
-                <div class="v14_10"></div><span class="v14_11">Delete</span>
+            <div className="v14_9">
+                <div className="v14_10"></div><span className="v14_11">Delete</span>
             </div>
                     <div>
-                        <span class="v12_342">Name : </span><div class="v12_343" name = "name" >{menuItem.name}</div>
-                        <span class="v12_351">Price :</span><div class="v12_352" name = "price" >{menuItem.price}</div>
+                        <span className="v12_342">Name : </span><div className="v12_343" name = "name" >{menuItem.name}</div>
+                        <span className="v12_351">Price :</span><div className="v12_352" name = "price" >{menuItem.price}</div>
                         <span className="v12_364">Description :</span>
-                        <input className="v12_365" type='text' name='option' onChange={handleChangeInput} />
+                        <input className="v12_365" type='text' name='option' onChange={(e) => setDescription(e.target.value)} />
                         <span className="v12_366">Amount :</span>
-                        <input className="v12_367" type='number' name='amount' onChange={handleChangeInput} />
+                        <input className="v12_367" type='number' name='amount' onChange={(e) => setAmount(e.target.value)} />
                     </div>
         </div>
     )
