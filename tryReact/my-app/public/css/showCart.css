@@ -286,7 +286,7 @@
   }
   .orderArea{
     width: 1150px;
-    min-height: 0px;
+    min-height: 120px;
     position: relative;
     top: 150px;
     left: 280px;
@@ -339,7 +339,7 @@
     width: 1000px;
     height: 420px;
     position: relative;
-    top: 160px;
+    top: 200px;
     left: 280px;
     background: white;
   }
