@@ -15,3 +15,4 @@ export const reportSale = (data) => axios.post("http://127.0.0.1:8082/pos/produc
 export const getEachOrder = (id) => axios.get(`http://127.0.0.1:8082/pos/product/transaction/${id}`)
 export const getAllMoney = () => axios.get("http://127.0.0.1:8082/pos/product/money")
 export const getMoney = (id) => axios.get(`http://127.0.0.1:8082/pos/product/money/${id}`)
+export const deleteMoney = (id) => axios.delete(`http://127.0.0.1:8082/pos/product/money/${id}`)

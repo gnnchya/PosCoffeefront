@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react'
 import testUtils from 'react-dom/test-utils';
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import { getAllMoney, getMoney} from '../actions/posts'
+import { getAllMoney, getMoney, deleteMoney} from '../actions/posts'
 // import PostList from '../components/PostList'
 export default ShowMoney
 
 function ShowMoney() {
     const [moneyItem, setMoneyItems] = useState([])
-    const [menu, setMenu] = useState({})
+    const [indexMoney, setIndexMoney] = useState()
     useEffect(() => {
         getList()
     }, [])
@@ -21,11 +21,33 @@ function ShowMoney() {
             if (response.status === 200) {
                 const temp = response.data.data
                 setMoneyItems(temp || [])
+                
             }
         } catch (error) {
             alert(error)
         }
     }
+    function refreshPage() {
+        window.location.reload(false);
+      }
+
+
+    const deleteMoneyItem = async (e) => {
+        try {
+            e.preventDefault()
+            // console.log("indexs",e.currentTarget.dataset.index); //will log the index of the clicked item
+
+            const id = moneyItem[e.currentTarget.dataset.index]._id
+            const response = await deleteMoney(id)
+            
+            if (response.status === 200) {
+                alert("deleted")
+                refreshPage()
+            }
+        } catch (error) {
+            alert(error)
+        }
+      }
 
     return (
         <div className="v1_3">
@@ -56,14 +78,15 @@ function ShowMoney() {
             <div className="moneyArea">
 
             {moneyItem.map((item, index) => {
+                
                 return (
-                    
+    
                     <div className="money"> 
                         <span class="v18_239">Notes / Coins :</span>
                         <div class="v18_240" name="value" key={index}>{item.value}</div>
                         <span class="v18_241">Amount :</span>
                         <div class="v18_242" name="amount" key={index}>{item.amount}</div>
-                        <button class="v18_266">
+                        <button class="v18_266" key= {index} data-index={index} onClick={deleteMoneyItem}>
                             <span class="v18_267">Delete</span>
                         </button>
                         <button class="v21_430">
