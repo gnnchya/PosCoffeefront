@@ -5,7 +5,7 @@ import { createPost, getAllMenu } from '../actions/posts'
 // import PostList from '../components/PostList'
 
 function ShowMenu() {
-    let limit = 12
+    let limit = 100
     let {page} = useParams()
     // var url = new URL(window.location.href)
     // let page = url.searchParams.get("page")
@@ -82,8 +82,8 @@ function ShowMenu() {
                 {/* <Link onClick={reloadCss} to={{pathname:`/showMenu/${pageLeft(Number(page-1))}`}}>❮</Link>
                 <Link onClick={reloadCss} to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Link> */}
 
-                <Link  to={{pathname:`/showMenu/${pageLeft(Number(page-1))}`}}>❮</Link>
-                <Link  to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Link>
+                {/* <Link  to={{pathname:`/showMenu/${pageLeft(Number(page-1))}`}}>❮</Link>
+                <Link  to={{pathname:`/showMenu/${Number(page)+1}`}}>❯</Link> */}
 
                 {/* <Link to={{pathname:`/showMenu?page=${pageLeft(Number(page-1))}`}} >❮</Link>
                 <Link to={{pathname:`/showMenu?page=${Number(page)+1}`}} >❯</Link> */}
