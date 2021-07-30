@@ -56,9 +56,10 @@ function OrderInfo() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
+            <div className="orderArea">
             {menuItem.map((item, index) => {
                 return (
-                    <div>
+                    <div className="order1">
                         <span className="v17_509">Name : </span><div className="v17_510" key={index}>{item.name}</div>
                         <span className="v17_525">Amount :</span><div className="v17_526" key={index}>{item.amount}</div>
                         <span className="v17_523">Price :</span> <div className="v17_524" key={index}>{item.price}</div>
@@ -66,6 +67,7 @@ function OrderInfo() {
                     </div>
                 )
             })}
+            </div>
             <span className="v17_513">Method :</span><div className="v17_514" name = "payment_method">{orderItem.payment_method}</div>
             <span className="v17_515">Type :</span> <div className="v17_516" name = "type">{orderItem.type}</div>
             <span className="v17_517">Total Price :</span> <div className="v17_518" name = "price">{orderItem.price}</div>
