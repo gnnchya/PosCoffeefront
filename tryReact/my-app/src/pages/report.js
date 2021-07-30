@@ -7,52 +7,77 @@ import { createPost, getEachMenu, addToCart } from '../actions/posts'
 export default Report
 
 function Report() {
-    // const [menuItem, setMenuItems] = useState([])
-    // const [menu, setMenu] = useState([])
-    // const [description, setDescription] = useState("")
-    // const [amount, setAmount] = useState()
-    // const [cart, setCart] = useState([])
-    // useEffect(() => {
-    //     getList()
-    // }, [])
-    // let {id} = useParams()
-    // const getList = async (e) => {
-    //     try {
-    //         const response = await getEachMenu(id)
-    //         console.log(response.data.data)
-    //         // alert(response.data.data[0])
-    //         if (response.status === 200) {
-    //             setMenuItems(response.data.data || [])
-    //         }
+    const [menu, setMenu] = useState({})
+    const [categories, setCategories] = useState([])
+    const [category, setCategory] = useState("")
+    const [ingredients, setIngredients] = useState([])
+    const [itemName, setItemName] = useState("")
+    const [amount, setAmount] = useState("")
+    const [available, setAvailable] = useState(false)
 
-    //     } catch (error) {
-    //         alert(error)
-    //     }
-    // }
 
-    // const addCart = async (e) => {
-    //     try {
-    //         e.preventDefault()
-    //         console.log("menuItem", menuItem)
-    //         const temp = {_id:menuItem.id, category: menuItem.category, name:menuItem.name, ingredient:menuItem.ingredient, price:+menuItem.price, available:menuItem.available, amount:+amount, option:description}
+    function todayDate(){
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; 
+        var yyyy = today.getFullYear();
+        if(dd<10) 
+        {
+            dd='0'+dd;
+        } 
 
-    //         let tempMenu = [...menu]
-    //         tempMenu = menu.push(temp)
-    //         const cartData = {_id: id, customer_id: "test", menu: menu}
-    //         let test2 = [...cart]
-    //         test2 = cart.push(cartData)
-    //         // setCart(cartData)
-    //         console.log("cart", cart)
-    //         const response = await addToCart({id:id, menu:cart})
-    //         console.log(response.data.data)
-    //         // alert(response.data.data[0])
-    //         // if (response.status === 200) {
-    //         //     setCart(response.data.data || [])
-    //         // }
-    //     } catch (error) {
-    //         alert(error)
-    //     }
-    // }
+        if(mm<10) 
+        {
+            mm='0'+mm;
+        } 
+
+        var date = yyyy+'-'+mm+'-'+dd
+        return date
+    }
+
+    const addClick = async (e) => {
+        try {
+            e.preventDefault()
+            const tempIngredients ={item_name:itemName, amount: +amount}
+            const temp = {...menu, price:+menu.price, category:[...categories, category], ingredient:[...ingredients, tempIngredients], available:available}
+            const response = await createPost(temp)
+            console.log(response)
+            
+
+            if (response.status === 201) {
+                console.log("create", response)
+            }
+        } catch (error) {
+            // if (error.status === 422){
+            //     alert("422")
+            // }
+            alert(error)
+        }
+      }
+
+
+    const handleChangeInput = (e) => {
+        const name = e.target.name
+        const value = e.target.value
+        setMenu((oldValue) => ({ ...oldValue, [name]: value }))
+
+    }
+    const handleChangeCategoryInput = (e) =>{
+
+        e.preventDefault()
+        let test = [...categories, category]
+        setCategories(test)
+        setCategory("")
+    }
+
+    const handleChangeIngredientInput = (e) =>{
+        e.preventDefault()
+        const tempIngredientObject = {item_name: itemName, amount: +amount}
+        let test2 = [...ingredients, tempIngredientObject]
+        setIngredients(test2)
+        setAmount("")
+        setItemName("")
+    }
 
     return (
         <div className="v1_3">
@@ -80,14 +105,42 @@ function Report() {
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
            
+            <span className="genReport">General / Sale Report </span>
+            <span className="format">Format : </span>
+            <select className="formatInput" type='text' name='format' onChange={handleChangeInput}>
+                <option value="excel">Excel</option>
+                <option value="csv">CSV</option>
+            </select>
+
+            <span className="from">Start Date : </span>
+            <input className="frominput" type="date" id="start" name="trip-start"
+                    min="2018-01-01" max={todayDate()} />
+
+            <span className="until">Until Date : </span>
+            <input className="untilinput" type="date" id="start" name="trip-start"
+                    min="2018-01-01" max={todayDate()} />
+
+            <span className="stockReport">Stock Report </span>
+
+            <span className="field">Field : </span>
+            <select className="fieldInput" type='text' name='field' onChange={handleChangeInput}>
+                <option value="name">Name</option>
+                <option value="amount">Amount</option>
+                <option value="importDate">Import Date</option>
+                <option value="expireDate">Expire Date</option>
+            </select>
+
+            <span className="order">Ordering : </span>
+            <select className="orderInput" type='text' name='order' onChange={handleChangeInput}>
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+            </select>
+
             <div class="v18_47">
                 <div class="v18_52"></div>
                 <span class="v18_53">General Report</span>
                 <button class="v18_188">
-                    <span class="v18_190">View</span>
-                </button>
-                <button class="v18_192">
-                    <span class="v18_193">Print</span>
+                    <span class="v18_190">Download</span>
                 </button>
             </div>
         
@@ -95,10 +148,7 @@ function Report() {
                 <div class="v18_195"></div>
                 <span class="v18_196">Sale Report</span>
                 <button class="v18_198">
-                    <span class="v18_199">View</span>
-                </button>
-                <button class="v18_201">
-                    <span class="v18_202">Print</span>
+                    <span class="v18_199">Download</span>
                 </button>
             </div>
        
@@ -106,10 +156,7 @@ function Report() {
                 <div class="v18_204"></div>
                 <span class="v18_205">Stock Report</span>
                 <button class="v18_207">
-                    <span class="v18_208">View</span>
-                </button>
-                <button class="v18_210">
-                    <span class="v18_211">Print</span>
+                    <span class="v18_208">Download</span>
                 </button>
             </div>
             

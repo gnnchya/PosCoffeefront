@@ -58,7 +58,7 @@ function App() {
                 <Route exact path="/showHistory">
                     <ShowHistory />
                 </Route>
-                <Route exact path="/orderInfo">
+                <Route exact path="/orderInfo/:id">
                     <OrderInfo />
                 </Route>
                 <Route exact path="/showReport">
