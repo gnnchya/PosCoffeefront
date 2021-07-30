@@ -27,6 +27,7 @@ function CreateMenu() {
 
             if (response.status === 201) {
                 console.log("create", response)
+                alert("created")
             }
         } catch (error) {
             // if (error.status === 422){

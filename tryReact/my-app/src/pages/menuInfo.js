@@ -7,6 +7,8 @@ import { createPost, getEachMenu, addToCart } from '../actions/posts'
 export default MenuInfo
 
 function MenuInfo() {
+    // const customer_id = "c3ok6a2mvdvh8i865tag"
+
     const [menuItem, setMenuItems] = useState([])
     const [menu, setMenu] = useState([])
     const [description, setDescription] = useState("")
@@ -15,7 +17,8 @@ function MenuInfo() {
     useEffect(() => {
         getList()
     }, [])
-    let {id} = useParams()
+    let {id} = useParams("id")
+    console.log("iddd", id)
     const getList = async (e) => {
         try {
             const response = await getEachMenu(id)
@@ -38,12 +41,13 @@ function MenuInfo() {
 
             let tempMenu = [...menu]
             tempMenu = menu.push(temp)
-            const cartData = {_id: id, customer_id: "test", menu: menu}
+            const cartData = {_id: "c3ok6a2mvdvh8i865ta0", customer_id: "c3ok6a2mvdvh8i865tag", menu: menu}
             let test2 = [...cart]
             test2 = cart.push(cartData)
             // setCart(cartData)
             console.log("cart", cart)
-            const response = await addToCart({id:id, menu:cart})
+            // const response = await addToCart({id:id, menu:cart})
+            const response = await addToCart(id, cart[0])
             console.log(response.data.data)
             // alert(response.data.data[0])
             // if (response.status === 200) {
@@ -102,3 +106,4 @@ function MenuInfo() {
         </div>
     )
 }
+
