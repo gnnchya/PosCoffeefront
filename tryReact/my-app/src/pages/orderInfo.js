@@ -1,7 +1,28 @@
-import React from "react"
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import { getEachOrder, getEachMenu, addToCart } from '../actions/posts'
 
 function OrderInfo() {
+    const [orderItem, setOrderItem] = useState([])
+    useEffect(() => {
+        getList()
+    }, [])
+    let { id } = useParams()
+    const getList = async (e) => {
+        try {
+            const response = await getEachOrder(id)
+            console.log(response.data.data)
+            // alert(response.data.data[0])
+            if (response.status === 200) {
+                setOrderItem(response.data.data || [])
+            }
+
+        } catch (error) {
+            alert(error)
+        }
+    }
+
     return (
         <div className="v1_3">
             <div className="v6_3"></div>
@@ -26,34 +47,23 @@ function OrderInfo() {
                 <span className="v6_23">LOG OUT</span>
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
-            <span class="v17_509">Name : </span>
-            <div class="v17_510"></div><span class="v17_511">Paid :</span>
-            <div class="v17_512"></div><span class="v17_513">Method :</span>
-            <div class="v17_514"></div><span class="v17_515">Type :</span>
-            <div class="v17_516"></div><span class="v17_517">Total Price :</span>
-            <div class="v17_518"></div><span class="v17_519">Destination :</span>
-            <div class="v17_520"></div><span class="v17_521">Description :</span>
-            <div class="v17_522"></div><span class="v17_523">Price :</span>
-            <div class="v17_524"></div><span class="v17_525">Amount :</span>
-            <div class="v17_526"></div>
-            <div class="v17_527">
-                <div class="v17_528"></div>
-            </div>
-            <div class="v17_529">
-                <div class="v17_530"></div>
-            </div><span class="v17_531">+</span><span class="v17_532">-</span>
-            <span class="v17_533">Name : </span><div class="v17_534"></div>
-            <span class="v17_535">Description :</span><div class="v17_536"></div>
-            <span class="v17_537">Price :</span>
-            <div class="v17_538"></div><span class="v17_539">Amount :</span>
-            <div class="v17_540"></div>
-            <div class="v17_541">
-                <div class="v17_542"></div>
-            </div>
-            <div class="v17_543">
-                <div class="v17_544"></div>
-            </div><span class="v17_545">+</span><span class="v17_546">-</span>
-            <div class="name"></div>
+            {orderItem.Menu.map((item, index) => {
+                return (
+                    <div>
+                        <span class="v17_509">Name : </span><div class="v17_510"key={index}>{item.name}</div>
+                        <span class="v17_525">Amount :</span><div class="v17_526">{item.amount}</div>
+                        <span class="v17_523">Price :</span> <div class="v17_524">{item.price}</div>
+                        <span class="v17_521">Description :</span><div class="v17_522">{item.option}</div>
+                    </div>
+                )
+            })}
+            <span class="v17_511">Paid :</span> <div class="v17_512"></div>
+            <span class="v17_513">Method :</span><div class="v17_514">{orderItem.payment_method}</div>
+            <span class="v17_515">Type :</span> <div class="v17_516">{orderItem.type}</div>
+            <span class="v17_517">Total Price :</span> <div class="v17_518">{orderItem.total_price}</div>
+            <span class="v17_519">Destination :</span><div class="v17_520">{orderItem.destination}</div>
+
+
         </div>
     )
 }
