@@ -53,9 +53,68 @@ function Report() {
         return date
     }
 
-    const addClick = async (e) => {
+    const getReportStock = async (e) => {
         try {
             e.preventDefault()
+
+            if (format === "Excel"){
+                setFormat("excel")
+            }
+            else if (format === "CSV"){
+                setFormat("csv")
+            }
+            if (order === "Ascending"){
+                setOrder("ascending")
+            }
+            else if(order === "Descending"){
+                setOrder("descending")
+            }
+            const data = {format:format, field: field, order: order}
+
+            console.log("data", data)
+
+            const response = await reportStock(data)
+            console.log(response)
+            
+            if (response.status === 200) {
+                const url = window.URL.createObjectURL(new Blob([response.data]));
+                const link = document.createElement('a');
+                link.href = url;
+                if (format === "excel"){
+                    link.setAttribute('download', 'reposrtStock.xlsx');
+                }
+                else{
+                    link.setAttribute('download', 'reportStock.csv');
+                }
+                
+                document.body.appendChild(link);
+                link.click();
+            }
+            
+            
+        } catch (error) {
+            // if (error.status === 422){
+            //     alert("422")
+            // }
+            alert(error)
+        }
+      }
+
+      const getReport = async (e) => {
+        try {
+            e.preventDefault()
+            if (format === "Excel"){
+                setFormat("excel")
+            }
+            else if (format === "CSV"){
+                setFormat("csv")
+            }
+            if (order === "Ascending"){
+                setOrder("ascending")
+            }
+            else if(order === "Descending"){
+                setOrder("descending")
+            }
             const startDateUnix = new Date(startDate).getTime()/1000;
             const untilDateUnix = new Date(endDate).getTime()/1000;
             const data = {from: startDateUnix, until: untilDateUnix, format:format, field: field, order: order}
@@ -65,13 +124,25 @@ function Report() {
                 alert("Please enter start and until date")
             }
             else{
-                const response = await reportStock(data)
+                const response = await report(data)
                 console.log(response)
                 
 
-                if (response.status === 201) {
+                if (response.status === 200) {
+                    
+                    const url = window.URL.createObjectURL(new Blob([response.data]));
+                const link = document.createElement('a');
+                link.href = url;
+                if (format === "excel"){
+                    link.setAttribute('download', 'reposrtStock.xlsx');
+                }
+                else{
+                    link.setAttribute('download', 'reportStock.csv');
+                }
                 
-                    console.log("create", response)
+                document.body.appendChild(link);
+                link.click();
+                  
                 }
             }
             
@@ -83,6 +154,57 @@ function Report() {
         }
       }
 
+      const getReportSale = async (e) => {
+        if (format === "Excel"){
+            setFormat("excel")
+        }
+        else if (format === "CSV"){
+            setFormat("csv")
+        }
+        if (order === "Ascending"){
+            setOrder("ascending")
+        }
+        else if(order === "Descending"){
+            setOrder("descending")
+        }
+        try {
+            e.preventDefault()
+            const startDateUnix = new Date(startDate).getTime()/1000;
+            const untilDateUnix = new Date(endDate).getTime()/1000;
+            const data = {from: startDateUnix, until: untilDateUnix, format:format, field: field, order: order}
+
+            console.log("data", data)
+            if (startDate === "" || endDate === ""){
+                alert("Please enter start and until date")
+            }
+            else{
+                const response = await reportSale(data)
+                console.log(response)
+                
+
+                if (response.status === 200) {
+                    const url = window.URL.createObjectURL(new Blob([response.data]));
+                const link = document.createElement('a');
+                link.href = url;
+                if (format === "excel"){
+                    link.setAttribute('download', 'reposrtStock.xlsx');
+                }
+                else{
+                    link.setAttribute('download', 'reportStock.csv');
+                }
+                
+                document.body.appendChild(link);
+                link.click();         
+                }
+            }
+            
+        } catch (error) {
+            // if (error.status === 422){
+            //     alert("422")
+            // }
+            alert(error)
+        }
+      }
 
     return (
         <div className="v1_3">
@@ -144,7 +266,7 @@ function Report() {
             <div class="v18_47">
                 <div class="v18_52"></div>
                 <span class="v18_53">General Report</span>
-                <button class="v18_188" onClick={addClick}>
+                <button class="v18_188" onClick={getReport}>
                     <span class="v18_190">Download</span>
                 </button>
             </div>
@@ -152,7 +274,7 @@ function Report() {
             <div class="v18_194">
                 <div class="v18_195"></div>
                 <span class="v18_196">Sale Report</span>
-                <button class="v18_198" onClick={addClick}>
+                <button class="v18_198" onClick={getReportSale}>
                     <span class="v18_199">Download</span>
                 </button>
             </div>
@@ -160,7 +282,7 @@ function Report() {
             <div class="v18_203">
                 <div class="v18_204"></div>
                 <span class="v18_205">Stock Report</span>
-                <button class="v18_207" onClick={addClick} download>
+                <button class="v18_207" onClick={getReportStock}>
                     {<Link to= "/homepage"><span class="v18_208">Download</span></Link>}
                 </button>
             </div>
