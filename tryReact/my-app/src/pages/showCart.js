@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { getCart } from "../actions/posts";
 
 function ShowCart() {
-    const [menuItem, setMenuItems] = useState([])
+    const [paid, setPaid] = useState("")
+    const [method, setMethod] = useState("")
+    
 
-    const [cart, setCart] = useState({})
     const id = "pondnarawich"
     const data = "pondnarawich"
     const getList = async (e) => {
@@ -21,13 +22,7 @@ function ShowCart() {
         }
     }
 
-    // cart => setMenuItems(cart.Menu)
-    const handleChangeInput = (e) => {
-        const name = e.target.name
-        const value = e.target.value
-        setMenuItems((oldValue) => ({ ...oldValue, [name]: value }))
-
-    }
+    
     return (
         <div className="v1_3">
             <div className="v6_3"></div>
