@@ -9,5 +9,10 @@ export const getEachMenu = (id) => axios.get(`http://127.0.0.1:8080/pos/menu/${i
 export const getCart = (id) => axios.get(`http://127.0.0.1:8080/pos/cart/${id}`)
 export const FinishCart = (id,data) => axios.post(`http://127.0.0.1:8080/pos/cart/${id}/finish`,data)
 export const getAllOrder = () => axios.get("http://127.0.0.1:8080/pos/cart/")
+export const reportStock = (data) => axios.get("localhost:8082/pos/product/reportStock",data)
+export const report = (data) => axios.get("localhost:8082/pos/product/report",data)
+export const reportSale = (data) => axios.get("localhost:8082/pos/product/reportSale",data)
+
+
 
 
