@@ -76,39 +76,62 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v18_268 {
-  width: 115px;
-  height: 46px;
-  background: url("../images/v18_268.png");
+
+.moneyArea {
+  width: 1150px;
+  height: 600px;
+  background: white;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 179px;
-  left: 1140px;
-  overflow: hidden;
+  top: 150px;
+  left: 250px;
+  overflow: Auto;
 }
-.v18_266 {
-  width: 115px;
-  height: 46px;
-  background: rgba(0,0,0,1);
+
+.money{
+  width: 1150px;
+  height: 50px;
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   opacity: 1;
   position: relative;
   top: 0px;
   left: 0px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.v18_266 {
+  width: 100px;
+  height: 46px;
+  border:none;
+  background: rgba(0,0,0,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 900px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   overflow: hidden;
 }
+
+.v18_266:hover{
+  opacity:0.6;
+  transition:0.5s;
+}
 .v18_267 {
   width: 88px;
   color: rgba(255,255,255,1);
   position: absolute;
   top: 4px;
-  left: 14px;
+  left: 6px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
@@ -500,8 +523,8 @@ body {
   width: 345px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 181px;
-  left: 257px;
+  top: 2px;
+  left: 0px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
@@ -514,8 +537,8 @@ body {
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;
-  top: 181px;
-  left: 417px;
+  top: 2px;
+  left: 165px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -526,8 +549,8 @@ body {
   width: 124px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 181px;
-  left: 862px;
+  top: 2px;
+  left: 625px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
@@ -540,8 +563,8 @@ body {
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;
-  top: 181px;
-  left: 967px;
+  top: 2px;
+  left: 730px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -920,22 +943,28 @@ body {
 .v18_285 {
   width: 259px;
   height: 57px;
+  border:none;
   background: rgba(245,201,88,1);
   opacity: 1;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 760px;
+  left: 230px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
 }
+
+.v18_285:hover{
+  opacity: 0.6;
+  transition:0.5s;
+}
 .v18_286 {
   width: 244px;
   color: rgba(255,255,255,1);
   position: absolute;
-  top: 11px;
+  top: 10px;
   left: 8px;
   font-family: Marvel;
   font-weight: Bold;
@@ -959,16 +988,22 @@ body {
 .v21_430 {
   width: 115px;
   height: 47px;
+  border:none;
   background: rgba(196,196,196,1);
   opacity: 1;
-  position: relative;
+  position: absolute;
   top: 0px;
-  left: 0px;
+  left: 1020px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   overflow: hidden;
+}
+
+.v21_430:hover{
+  opacity:0.6;
+  transition:0.5s;
 }
 .v21_431 {
   width: 108px;
