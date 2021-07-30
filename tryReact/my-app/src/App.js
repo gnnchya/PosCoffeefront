@@ -19,6 +19,7 @@ import ChangeBill from './pages/changeBill'
 import ShowHistory from './pages/showHistory'
 import OrderInfo from './pages/orderInfo'
 import Report from './pages/report'
+import ShowMoney from './pages/showMoney'
 import React, { Component }  from 'react';
 import TestAxios from './pages/testAxios';
 
@@ -63,6 +64,9 @@ function App() {
                 </Route>
                 <Route exact path="/showReport">
                     <Report />
+                </Route>
+                <Route exact path="/showMoney">
+                    <ShowMoney />
                 </Route>
             </Switch>
         </Router>
