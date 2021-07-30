@@ -84,15 +84,26 @@ function ShowMoney() {
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
 
-            <div class="v18_268">
-                <span class="v18_239">Notes / Coins :</span>
-                <div class="v18_240"></div>
-                <span class="v18_241">Amount :</span>
-                <div class="v18_266"></div>
-                <span class="v18_267">Delete</span>
-                <span class="v21_431">Update</span>
+            <div className="moneyArea">
+
+                <div className="money"> 
+                    <span class="v18_239">Notes / Coins :</span>
+                    <div class="v18_240"></div>
+                    <span class="v18_241">Amount :</span>
+                    <div class="v18_242"></div>
+                    <button class="v18_266">
+                        <span class="v18_267">Delete</span>
+                    </button>
+                    <button class="v21_430">
+                        <span class="v21_431">Update</span>
+                    </button>
+                </div>
+                
             </div>
-             
+
+            <button class="v18_285">
+                        <span class="v18_286">Add Notes / Coins</span>
+            </button>
         </div>
     )
 }
