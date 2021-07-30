@@ -267,7 +267,7 @@ body {
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;
-  top: 321px;
+  top: 37%;
   left: 231px;
 }
 .v18_52 {
@@ -276,8 +276,8 @@ body {
   background: rgba(245,201,88,1);
   opacity: 1;
   position: absolute;
-  top: 321px;
-  left: 231px;
+  top: 0px;
+  left: 0px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -288,44 +288,39 @@ body {
   width: 166px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 332px;
-  left: 326px;
+  top: 8px;
+  left: 96px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
   text-align: center;
 }
+
 .v18_188 {
   width: 143px;
-  height: 74px;
-  background: url("../images/v18_188.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 419px;
-  left: 337px;
-  overflow: hidden;
-}
-.v18_189 {
-  width: 143px;
   height: 57px;
+  border:none;
   background: rgba(0,0,0,1);
   opacity: 1;
   position: relative;
-  top: 0px;
-  left: 0px;
+  top: 100px;
+  left: 107.5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
 }
+
+.v18_188:hover{
+  opacity:0.6;
+  transition: 0.5s;
+}
+
 .v18_190 {
   width: 94px;
-  color: rgba(0,0,0,1);
+  color: white;
   position: absolute;
   top: 11px;
   left: 25px;
@@ -335,27 +330,21 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v18_191 {
-  width: 143px;
-  height: 66px;
-  background: url("../images/v18_191.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 526px;
-  left: 337px;
-  overflow: hidden;
+
+
+.v18_192:hover{
+  opacity:0.6;
+  transition: 0.5s;
 }
 .v18_192 {
   width: 143px;
   height: 57px;
   background: rgba(245,201,88,1);
+  border:none;
   opacity: 1;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 200px;
+  left: 107.5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -380,7 +369,7 @@ body {
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;
-  top: 321px;
+  top: 37%;
   left: 636px;
 }
 .v18_195 {
@@ -389,8 +378,8 @@ body {
   background: rgba(245,201,88,1);
   opacity: 1;
   position: absolute;
-  top: 321px;
-  left: 636px;
+  top: 0px;
+  left: 0px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -401,44 +390,37 @@ body {
   width: 166px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 332px;
-  left: 731px;
+  top: 8px;
+  left: 96px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
   text-align: center;
 }
-.v18_197 {
-  width: 143px;
-  height: 74px;
-  background: url("../images/v18_197.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 419px;
-  left: 742px;
-  overflow: hidden;
-}
+
 .v18_198 {
   width: 143px;
   height: 57px;
+  border:none;
   background: rgba(0,0,0,1);
   opacity: 1;
   position: relative;
-  top: 0px;
-  left: 0px;
+  top: 100px;
+  left: 107.5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
 }
+.v18_198:hover{
+  opacity:0.6;
+  transition:0.5s;
+}
 .v18_199 {
   width: 94px;
-  color: rgba(0,0,0,1);
+  color: white;
   position: absolute;
   top: 11px;
   left: 25px;
@@ -448,32 +430,26 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v18_200 {
-  width: 143px;
-  height: 66px;
-  background: url("../images/v18_200.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 526px;
-  left: 742px;
-  overflow: hidden;
-}
+
 .v18_201 {
   width: 143px;
   height: 57px;
+  border:none;
   background: rgba(245,201,88,1);
   opacity: 1;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 200px;
+  left: 107.5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
+}
+
+.v18_201:hover{
+  opacity:0.6;
+  transition:0.5s;
 }
 .v18_202 {
   width: 135px;
@@ -493,7 +469,7 @@ body {
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;
-  top: 321px;
+  top: 37%;
   left: 1041px;
 }
 .v18_204 {
@@ -502,8 +478,8 @@ body {
   background: rgba(245,201,88,1);
   opacity: 1;
   position: absolute;
-  top: 321px;
-  left: 1041px;
+  top: 0px;
+  left: 0px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -514,44 +490,38 @@ body {
   width: 166px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 332px;
-  left: 1136px;
+  top: 8px;
+  left: 96px;
   font-family: Marvel;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
   text-align: center;
 }
-.v18_206 {
-  width: 143px;
-  height: 74px;
-  background: url("../images/v18_206.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 419px;
-  left: 1147px;
-  overflow: hidden;
-}
+
 .v18_207 {
   width: 143px;
   height: 57px;
+  border:none;
   background: rgba(0,0,0,1);
   opacity: 1;
   position: relative;
-  top: 0px;
-  left: 0px;
+  top: 100px;
+  left: 107.5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
 }
+
+.v18_207:hover{
+  opacity:0.6;
+  transition:0.5s;
+}
 .v18_208 {
   width: 94px;
-  color: rgba(0,0,0,1);
+  color: white;
   position: absolute;
   top: 11px;
   left: 25px;
@@ -561,32 +531,26 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v18_209 {
-  width: 143px;
-  height: 66px;
-  background: url("../images/v18_209.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 526px;
-  left: 1147px;
-  overflow: hidden;
-}
+
 .v18_210 {
   width: 143px;
   height: 57px;
+  border:none;
   background: rgba(245,201,88,1);
   opacity: 1;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 200px;
+  left: 107.5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
+}
+
+.v18_210:hover{
+  opacity:0.6;
+  transition:0.5s;
 }
 .v18_211 {
   width: 135px;

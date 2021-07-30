@@ -7,52 +7,52 @@ import { createPost, getEachMenu, addToCart } from '../actions/posts'
 export default Report
 
 function Report() {
-    const [menuItem, setMenuItems] = useState([])
-    const [menu, setMenu] = useState([])
-    const [description, setDescription] = useState("")
-    const [amount, setAmount] = useState()
-    const [cart, setCart] = useState([])
-    useEffect(() => {
-        getList()
-    }, [])
-    let {id} = useParams()
-    const getList = async (e) => {
-        try {
-            const response = await getEachMenu(id)
-            console.log(response.data.data)
-            // alert(response.data.data[0])
-            if (response.status === 200) {
-                setMenuItems(response.data.data || [])
-            }
+    // const [menuItem, setMenuItems] = useState([])
+    // const [menu, setMenu] = useState([])
+    // const [description, setDescription] = useState("")
+    // const [amount, setAmount] = useState()
+    // const [cart, setCart] = useState([])
+    // useEffect(() => {
+    //     getList()
+    // }, [])
+    // let {id} = useParams()
+    // const getList = async (e) => {
+    //     try {
+    //         const response = await getEachMenu(id)
+    //         console.log(response.data.data)
+    //         // alert(response.data.data[0])
+    //         if (response.status === 200) {
+    //             setMenuItems(response.data.data || [])
+    //         }
 
-        } catch (error) {
-            alert(error)
-        }
-    }
+    //     } catch (error) {
+    //         alert(error)
+    //     }
+    // }
 
-    const addCart = async (e) => {
-        try {
-            e.preventDefault()
-            console.log("menuItem", menuItem)
-            const temp = {_id:menuItem.id, category: menuItem.category, name:menuItem.name, ingredient:menuItem.ingredient, price:+menuItem.price, available:menuItem.available, amount:+amount, option:description}
+    // const addCart = async (e) => {
+    //     try {
+    //         e.preventDefault()
+    //         console.log("menuItem", menuItem)
+    //         const temp = {_id:menuItem.id, category: menuItem.category, name:menuItem.name, ingredient:menuItem.ingredient, price:+menuItem.price, available:menuItem.available, amount:+amount, option:description}
 
-            let tempMenu = [...menu]
-            tempMenu = menu.push(temp)
-            const cartData = {_id: id, customer_id: "test", menu: menu}
-            let test2 = [...cart]
-            test2 = cart.push(cartData)
-            // setCart(cartData)
-            console.log("cart", cart)
-            const response = await addToCart({id:id, menu:cart})
-            console.log(response.data.data)
-            // alert(response.data.data[0])
-            // if (response.status === 200) {
-            //     setCart(response.data.data || [])
-            // }
-        } catch (error) {
-            alert(error)
-        }
-    }
+    //         let tempMenu = [...menu]
+    //         tempMenu = menu.push(temp)
+    //         const cartData = {_id: id, customer_id: "test", menu: menu}
+    //         let test2 = [...cart]
+    //         test2 = cart.push(cartData)
+    //         // setCart(cartData)
+    //         console.log("cart", cart)
+    //         const response = await addToCart({id:id, menu:cart})
+    //         console.log(response.data.data)
+    //         // alert(response.data.data[0])
+    //         // if (response.status === 200) {
+    //         //     setCart(response.data.data || [])
+    //         // }
+    //     } catch (error) {
+    //         alert(error)
+    //     }
+    // }
 
     return (
         <div className="v1_3">
@@ -80,39 +80,39 @@ function Report() {
             </span>
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
            
-            <div class="v18_47"></div>
-            <div class="v18_52"></div>
-            <span class="v18_53">General Report</span>
-            <div class="v18_188">
-                <div class="v18_189"></div>
-                <span class="v18_190">View</span>
+            <div class="v18_47">
+                <div class="v18_52"></div>
+                <span class="v18_53">General Report</span>
+                <button class="v18_188">
+                    <span class="v18_190">View</span>
+                </button>
+                <button class="v18_192">
+                    <span class="v18_193">Print</span>
+                </button>
             </div>
-            <div class="v18_191">
-                <div class="v18_192"></div>
-                <span class="v18_193">Print</span>
+        
+            <div class="v18_194">
+                <div class="v18_195"></div>
+                <span class="v18_196">Sale Report</span>
+                <button class="v18_198">
+                    <span class="v18_199">View</span>
+                </button>
+                <button class="v18_201">
+                    <span class="v18_202">Print</span>
+                </button>
             </div>
-            <div class="v18_194"></div>
-            <div class="v18_195"></div>
-            <span class="v18_196">Sale Report</span>
-            <div class="v18_197">
-                <div class="v18_198"></div>
-                <span class="v18_199">View</span>
+       
+            <div class="v18_203">
+                <div class="v18_204"></div>
+                <span class="v18_205">Stock Report</span>
+                <button class="v18_207">
+                    <span class="v18_208">View</span>
+                </button>
+                <button class="v18_210">
+                    <span class="v18_211">Print</span>
+                </button>
             </div>
-            <div class="v18_200">
-                <div class="v18_201"></div>
-                <span class="v18_202">Print</span>
-            </div>
-            <div class="v18_203"></div>
-            <div class="v18_204"></div>
-            <span class="v18_205">Stock Report</span>
-            <div class="v18_206">
-                <div class="v18_207"></div>
-                <span class="v18_208">View</span>
-            </div>
-            <div class="v18_209">
-                <div class="v18_210"></div>
-                <span class="v18_211">Print</span>
-            </div>
+            
         </div>
     )
 }
