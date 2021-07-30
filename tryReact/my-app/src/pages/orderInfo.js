@@ -13,13 +13,19 @@ function OrderInfo() {
     let { id } = useParams()
     const getList = async (e) => {
         try {
+            console.log("id", id)
             const response = await getEachOrder(id)
             console.log(response.data.data)
             // alert(response.data.data[0])
             if (response.status === 200) {
-                setOrderItem(response.data.data || [])
-                console.log("proud mai suay",orderItem.cart.menu)
-                setMenuItem(orderItem.cart.menu || [])
+                console.log("data", response.data)
+                console.log("data2", response.data.data.cart.menu)
+                const menuFromGet = response.data.data.cart.menu
+                const orderItems = response.data.data
+                setOrderItem(orderItems || [])
+                // console.log("proud mai suay",orderItem.cart.menu)
+                setMenuItem(menuFromGet || [])
+                console.log("menuItem", menuItem)
             }
 
         } catch (error) {
