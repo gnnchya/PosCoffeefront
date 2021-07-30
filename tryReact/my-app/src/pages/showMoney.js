@@ -2,61 +2,30 @@ import React, { useState, useEffect } from 'react'
 import testUtils from 'react-dom/test-utils';
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import { createPost, getEachMenu, addToCart } from '../actions/posts'
+import { getAllMoney, getMoney} from '../actions/posts'
 // import PostList from '../components/PostList'
 export default ShowMoney
 
 function ShowMoney() {
-    // // const customer_id = "c3ok6a2mvdvh8i865tag"
-
-    // const [menuItem, setMenuItems] = useState([])
-    // const [menu, setMenu] = useState([])
-    // const [description, setDescription] = useState("")
-    // const [amount, setAmount] = useState()
-    // const [cart, setCart] = useState([])
-    // useEffect(() => {
-    //     getList()
-    // }, [])
-    // let {id} = useParams("id")
-    // console.log("iddd", id)
-    // const getList = async (e) => {
-    //     try {
-    //         const response = await getEachMenu(id)
-    //         console.log(response.data.data)
-    //         // alert(response.data.data[0])
-    //         if (response.status === 200) {
-    //             setMenuItems(response.data.data || [])
-    //         }
-
-    //     } catch (error) {
-    //         alert(error)
-    //     }
-    // }
-
-    // const addCart = async (e) => {
-    //     try {
-    //         e.preventDefault()
-    //         console.log("menuItem", menuItem)
-    //         const temp = {_id:menuItem.id, category: menuItem.category, name:menuItem.name, ingredient:menuItem.ingredient, price:+menuItem.price, available:menuItem.available, amount:+amount, option:description}
-
-    //         let tempMenu = [...menu]
-    //         tempMenu = menu.push(temp)
-    //         const cartData = {_id: "c3ok6a2mvdvh8i865ta0", customer_id: "c3ok6a2mvdvh8i865tag", menu: menu}
-    //         let test2 = [...cart]
-    //         test2 = cart.push(cartData)
-    //         // setCart(cartData)
-    //         console.log("cart", cart)
-    //         // const response = await addToCart({id:id, menu:cart})
-    //         const response = await addToCart(id, cart[0])
-    //         console.log(response.data.data)
-    //         // alert(response.data.data[0])
-    //         // if (response.status === 200) {
-    //         //     setCart(response.data.data || [])
-    //         // }
-    //     } catch (error) {
-    //         alert(error)
-    //     }
-    // }
+    const [moneyItem, setMoneyItems] = useState([])
+    const [menu, setMenu] = useState({})
+    useEffect(() => {
+        getList()
+    }, [])
+    
+    const getList = async (e) => {
+        try {
+            const response = await getAllMoney()
+            // console.log(response.data.data)
+            // alert(response.data.data[0])
+            if (response.status === 200) {
+                const temp = response.data.data
+                setMoneyItems(temp || [])
+            }
+        } catch (error) {
+            alert(error)
+        }
+    }
 
     return (
         <div className="v1_3">
@@ -86,18 +55,24 @@ function ShowMoney() {
 
             <div className="moneyArea">
 
-                <div className="money"> 
-                    <span class="v18_239">Notes / Coins :</span>
-                    <div class="v18_240"></div>
-                    <span class="v18_241">Amount :</span>
-                    <div class="v18_242"></div>
-                    <button class="v18_266">
-                        <span class="v18_267">Delete</span>
-                    </button>
-                    <button class="v21_430">
-                        <span class="v21_431">Update</span>
-                    </button>
-                </div>
+            {moneyItem.map((item, index) => {
+                return (
+                    
+                    <div className="money"> 
+                        <span class="v18_239">Notes / Coins :</span>
+                        <div class="v18_240" name="value" key={index}>{item.value}</div>
+                        <span class="v18_241">Amount :</span>
+                        <div class="v18_242" name="amount" key={index}>{item.amount}</div>
+                        <button class="v18_266">
+                            <span class="v18_267">Delete</span>
+                        </button>
+                        <button class="v21_430">
+                            <span class="v21_431">Update</span>
+                        </button>
+                    </div>
+                    
+                )
+            })}
                 
             </div>
 

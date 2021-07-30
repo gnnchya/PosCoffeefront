@@ -534,6 +534,11 @@ body {
 .v18_240 {
   width: 426px;
   height: 42px;
+  color: rgba(0,0,0,1);
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 30px;
+  padding-left: 10px;
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;
@@ -560,6 +565,11 @@ body {
 .v18_242 {
   width: 132px;
   height: 42px;
+  color: rgba(0,0,0,1);
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 30px;
+  padding-left: 10px;
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;

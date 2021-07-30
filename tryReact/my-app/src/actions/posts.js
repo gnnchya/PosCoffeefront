@@ -13,3 +13,5 @@ export const reportStock = (data) => axios.post("http://127.0.0.1:8082/pos/produ
 export const report = (data) => axios.post("http://127.0.0.1:8082/pos/product/report", data, {responseType: 'arraybuffer'})
 export const reportSale = (data) => axios.post("http://127.0.0.1:8082/pos/product/reportSale", data, {responseType: 'arraybuffer'})
 export const getEachOrder = (id) => axios.get(`http://127.0.0.1:8082/pos/product/transaction/${id}`)
+export const getAllMoney = () => axios.get("http://127.0.0.1:8082/pos/product/money")
+export const getMoney = (id) => axios.get(`http://127.0.0.1:8082/pos/product/money/${id}`)
