@@ -160,8 +160,8 @@ function Report() {
             <div class="v18_203">
                 <div class="v18_204"></div>
                 <span class="v18_205">Stock Report</span>
-                <button class="v18_207" onClick={addClick}>
-                    <span class="v18_208">Download</span>
+                <button class="v18_207" onClick={addClick} download>
+                    {<Link to= "/homepage"><span class="v18_208">Download</span></Link>}
                 </button>
             </div>
             
