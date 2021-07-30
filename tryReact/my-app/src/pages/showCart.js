@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
-import { getCart } from "../actions/posts";
+import { FinishCart, getCart } from "../actions/posts";
 
 function ShowCart() {
-    const [menuItem, setMenuItems] = useState([])
-
-    const [cart, setCart] = useState({})
+    const [menuItem, setMenuItem] = useState([])
+    const [paid, setPaid] = useState("")
+    const [method, setMethod] = useState("")
+    const [type, setType] = useState("")
+    const [destination, setDestination] = useState("")
+    const [total, setTotal] = useState("")
     const id = "pondnarawich"
     const data = "pondnarawich"
     const getList = async (e) => {
@@ -14,20 +17,33 @@ function ShowCart() {
             console.log(response.data.data)
             // alert(response.data.data[0])
             if (response.status === 200) {
-                setCart(response.data.data || {})
             }
         } catch (error) {
             alert(error)
         }
     }
 
-    // cart => setMenuItems(cart.Menu)
-    const handleChangeInput = (e) => {
-        const name = e.target.name
-        const value = e.target.value
-        setMenuItems((oldValue) => ({ ...oldValue, [name]: value }))
 
-    }
+    const finish = async (e) => {
+        try {
+            e.preventDefault()
+            const data = {paid: paid, method:method, type: type, latitude: 1, longitude: 2}
+            const response = await FinishCart(data)
+            console.log(response)
+            
+
+            if (response.status === 201) {
+                console.log("create", response)
+                alert("created")
+            }
+        } catch (error) {
+            // if (error.status === 422){
+            //     alert("422")
+            // }
+            alert(error)
+        }
+      }
+    
     return (
         <div className="v1_3">
             <div className="v6_3"></div>
@@ -52,7 +68,7 @@ function ShowCart() {
             <Link to="/homepage"><span className="v6_32">POS COFFEE</span></Link>
 
             <div className="orderArea">
-            {menuItem.map((item, index) => {
+            {/* {menuItem.map((item, index) => {
                 return (
                 <div className="orders">
                     <span class="v14_84">Name : </span><div class="v14_85" key={index}>{item.name}</div>
@@ -62,20 +78,20 @@ function ShowCart() {
                     
                 </div>
                 )
-            })}
+            })} */}
             </div>
 
 
             <div className="payment">
-                <span class="v17_136">Paid :</span><input class="v17_137" type='number' name='name' onChange={handleChangeInput}></input>
-                <span class="v17_138">Method :</span><input class="v17_139" type='text' name='name' onChange={handleChangeInput}></input>
-                <span class="v17_140">Type :</span><input class="v17_141" type='text' name='name' onChange={handleChangeInput}></input>
-                <span class="v17_144">Total Price :</span><input class="v17_145" type='number' name='name' onChange={handleChangeInput}></input>
-                <span class="v17_142">Destination :</span><input class="v17_143" type='number' name='name' onChange={handleChangeInput}></input>
+                <span class="v17_136">Paid :</span><input class="v17_137" type='number' name='name' onChange={(e) => setPaid(e.target.value)}></input>
+                <span class="v17_138">Method :</span><input class="v17_139" type='text' name='name' onChange={(e) => setMethod(e.target.value)}></input>
+                <span class="v17_140">Type :</span><input class="v17_141" type='text' name='name' onChange={(e) => setType(e.target.value)}></input>
+                <span class="v17_144">Total Price :</span><input class="v17_145" type='number' name='name' onChange={(e) => setTotal(e.target.value)}></input>
+                <span class="v17_142">Destination :</span><input class="v17_143" type='number' name='name' onChange={(e) => setDestination(e.target.value)}></input>
 
 
                 <Link to={{pathname:`/changeBill/${id}` ,state:data}}><div class="v14_81">
-                    <span class="v14_82">Finish</span>
+                    <span class="v14_82" onClick={finish}>Finish</span>
                 </div></Link>
             </div>
 
