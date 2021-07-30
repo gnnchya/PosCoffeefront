@@ -35,6 +35,25 @@ function Report() {
         return date
     }
 
+    function firstDate(){
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; 
+        var yyyy = today.getFullYear()-1;
+        if(dd<10) 
+        {
+            dd='0'+dd;
+        } 
+
+        if(mm<10) 
+        {
+            mm='0'+mm;
+        } 
+
+        var date = yyyy+'-'+mm+'-'+dd
+        return date
+    }
+
     const addClick = async (e) => {
         try {
             e.preventDefault()
@@ -113,12 +132,12 @@ function Report() {
             </select>
 
             <span className="from">Start Date : </span>
-            <input className="frominput" type="date" id="start" name="trip-start"
-                    min="2018-01-01" max={todayDate()} />
+            <input className="frominput" type="date" id="start" name="start"
+                    min={firstDate()} max={todayDate()} />
 
             <span className="until">Until Date : </span>
-            <input className="untilinput" type="date" id="start" name="trip-start"
-                    min="2018-01-01" max={todayDate()} />
+            <input className="untilinput" type="date" id="until" name="until"
+                    min={firstDate()} max={todayDate()} />
 
             <span className="stockReport">Stock Report </span>
 
