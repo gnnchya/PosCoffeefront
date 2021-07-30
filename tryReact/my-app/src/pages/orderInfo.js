@@ -50,19 +50,20 @@ function OrderInfo() {
             {orderItem.Menu.map((item, index) => {
                 return (
                     <div>
-                        <span class="v17_509">Name : </span><div class="v17_510"key={index}>{item.name}</div>
-                        <span class="v17_525">Amount :</span><div class="v17_526">{item.amount}</div>
-                        <span class="v17_523">Price :</span> <div class="v17_524">{item.price}</div>
-                        <span class="v17_521">Description :</span><div class="v17_522">{item.option}</div>
+                        <span class="v17_509">Name : </span><div class="v17_510" key={index}>{item.name}</div>
+                        <span class="v17_525">Amount :</span><div class="v17_526" key={index}>{item.amount}</div>
+                        <span class="v17_523">Price :</span> <div class="v17_524" key={index}>{item.price}</div>
+                        <span class="v17_521">Description :</span><div class="v17_522" key={index}>{item.option}</div>
                     </div>
                 )
             })}
             <span class="v17_511">Paid :</span> <div class="v17_512"></div>
-            <span class="v17_513">Method :</span><div class="v17_514">{orderItem.payment_method}</div>
-            <span class="v17_515">Type :</span> <div class="v17_516">{orderItem.type}</div>
-            <span class="v17_517">Total Price :</span> <div class="v17_518">{orderItem.total_price}</div>
-            <span class="v17_519">Destination :</span><div class="v17_520">{orderItem.destination}</div>
+            <span class="v17_513">Method :</span><div class="v17_514" name = "payment_method">{orderItem.payment_method}</div>
+            <span class="v17_515">Type :</span> <div class="v17_516" name = "type">{orderItem.type}</div>
+            <span class="v17_517">Total Price :</span> <div class="v17_518" name = "total_price">{orderItem.total_price}</div>
+            <span class="v17_519">Destination :</span><div class="v17_520" name = "destination">{orderItem.destination}</div>
 
+            <div class="v17_506"></div><span class="v17_507">Finish</span>
 
         </div>
     )
