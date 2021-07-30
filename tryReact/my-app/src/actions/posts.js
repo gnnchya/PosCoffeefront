@@ -12,4 +12,4 @@ export const getAllOrder = () => axios.get("http://127.0.0.1:8082/pos/product/tr
 export const reportStock = (data) => axios.post("http://127.0.0.1:8082/pos/product/reportStock",data)
 export const report = (data) => axios.get("http://127.0.0.1:8082/pos/product/report",data)
 export const reportSale = (data) => axios.get("http://127.0.0.1:8082/pos/product/reportSale",data)
-export const getEachOrder = (id) => axios.get(`http://127.0.0.1:8080/pos/product/transaction/${id}`)
+export const getEachOrder = (id) => axios.get(`http://127.0.0.1:8082/pos/product/transaction/${id}`)

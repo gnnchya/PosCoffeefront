@@ -54,10 +54,10 @@ function ShowOrder() {
             <div className='menu'>
             {orderItem.map((item, index) => {
                 return (
-                    
                         <Link to={{pathname:`/orderInfo/${item.id}`}}><div className="v12_301">
                             <div className="v6_167"></div>
-                            <div className="v6_168"></div><span className="v6_169" key={index}>{item.name}</span><span className="v6_170" key={index}>{item.price}</span>
+                            <div className="v6_168"></div><span className="v6_169" key={index}>{item._id}</span>
+                            <span className="v6_170" key={index}>{item.price}</span>
                         </div></Link>
                     
                 )
