@@ -267,8 +267,8 @@ body {
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;
-  top: 37%;
-  left: 231px;
+  top: 420px;
+  left: 16%;
 }
 .v18_52 {
   width: 358px;
@@ -304,7 +304,7 @@ body {
   background: rgba(0,0,0,1);
   opacity: 1;
   position: relative;
-  top: 100px;
+  top: 150px;
   left: 107.5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -369,8 +369,8 @@ body {
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;
-  top: 37%;
-  left: 636px;
+  top: 420px;
+  left: 44.2%;
 }
 .v18_195 {
   width: 358px;
@@ -406,7 +406,7 @@ body {
   background: rgba(0,0,0,1);
   opacity: 1;
   position: relative;
-  top: 100px;
+  top: 150px;
   left: 107.5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -469,8 +469,8 @@ body {
   background: rgba(228,228,228,1);
   opacity: 1;
   position: absolute;
-  top: 37%;
-  left: 1041px;
+  top: 420px;
+  left: 72.5%;
 }
 .v18_204 {
   width: 358px;
@@ -506,7 +506,7 @@ body {
   background: rgba(0,0,0,1);
   opacity: 1;
   position: relative;
-  top: 100px;
+  top: 150px;
   left: 107.5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -563,4 +563,200 @@ body {
   font-size: 30px;
   opacity: 1;
   text-align: center;
+}
+
+.genReport {
+  width: 345px;
+  color: rgba(97,93,93,1);;
+  position: absolute;
+  top: 200px;
+  left: 280px;
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.format {
+  width: 345px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 140px;
+  left: 280px;
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+.formatInput {
+  width: 100px;
+  height: 42px;
+  padding-left: 10px;
+  color: rgba(0,0,0,1);
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 25px;
+  border: none;
+  background: rgba(228,228,228,1);
+  opacity: 1;
+  position: absolute;
+  top: 140px;
+  left: 380px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.from {
+  width: 345px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 235px;
+  left: 280px;
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+.frominput {
+  width: 190px;
+  height: 42px;
+  padding-left: 10px;
+  color: rgba(0,0,0,1);
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 25px;
+  border: none;
+  background: rgba(228,228,228,1);
+  opacity: 1;
+  position: absolute;
+  top: 235px;
+  left: 410px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.until {
+  width: 345px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 235px;
+  left: 650px;
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+.untilinput {
+  width: 190px;
+  height: 42px;
+  padding-left: 10px;
+  color: rgba(0,0,0,1);
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 25px;
+  border: none;
+  background: rgba(228,228,228,1);
+  opacity: 1;
+  position: absolute;
+  top: 235px;
+  left: 780px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.stockReport {
+  width: 345px;
+  color: rgba(97,93,93,1);;
+  position: absolute;
+  top: 300px;
+  left: 280px;
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.field {
+  width: 345px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 335px;
+  left: 280px;
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+.fieldInput {
+  width: 200px;
+  height: 42px;
+  padding-left: 10px;
+  color: rgba(0,0,0,1);
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 25px;
+  border: none;
+  background: rgba(228,228,228,1);
+  opacity: 1;
+  position: absolute;
+  top: 335px;
+  left: 350px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.order {
+  width: 345px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 335px;
+  left: 590px;
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+.orderInput {
+  width: 200px;
+  height: 42px;
+  padding-left: 10px;
+  color: rgba(0,0,0,1);
+  font-family: Marvel;
+  font-weight: Bold;
+  font-size: 25px;
+  border: none;
+  background: rgba(228,228,228,1);
+  opacity: 1;
+  position: absolute;
+  top: 335px;
+  left: 710px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
 }
