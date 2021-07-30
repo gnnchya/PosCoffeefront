@@ -119,9 +119,9 @@ function CreateMenu() {
                 <input className="v6_287" type='number' name='price' onChange={handleChangeInput} /*required="true"*//>
             <span className="v6_288">Available :</span>
                 <input className="v6_289" type='checkbox' name='available' onChange={(e) => setAvailable(e.currentTarget.checked)} />
-            <Link to="/homepage"><button className="v6_192" onClick={addClick}>  
+            <Link to="/homepage" className="v6_192" onClick={addClick}>  
                 {<span className="v6_194">Create Menu</span> }
-            </button></Link>
+            </Link>
 
             </form >
 
