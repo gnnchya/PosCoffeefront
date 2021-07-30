@@ -18,8 +18,8 @@ function OrderInfo() {
             // alert(response.data.data[0])
             if (response.status === 200) {
                 setOrderItem(response.data.data || [])
+                console.log("proud mai suay",orderItem.cart.menu)
                 setMenuItem(orderItem.cart.menu || [])
-
             }
 
         } catch (error) {
