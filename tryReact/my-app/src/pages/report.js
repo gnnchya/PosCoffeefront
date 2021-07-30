@@ -2,18 +2,17 @@ import React, { useState, useEffect } from 'react'
 import testUtils from 'react-dom/test-utils';
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import { createPost, getEachMenu, addToCart } from '../actions/posts'
+import { report, reportSale, reportStock } from '../actions/posts'
 // import PostList from '../components/PostList'
 export default Report
 
 function Report() {
-    const [menu, setMenu] = useState({})
-    const [categories, setCategories] = useState([])
-    const [category, setCategory] = useState("")
-    const [ingredients, setIngredients] = useState([])
-    const [itemName, setItemName] = useState("")
-    const [amount, setAmount] = useState("")
-    const [available, setAvailable] = useState(false)
+
+    const [format, setFormat] = useState("excel")
+    const [startDate, setStartDate] = useState()
+    const [endDate, setEndDate] = useState("")
+    const [field, setField] = useState("name")
+    const [order, setOrder] = useState("ascending")
 
 
     function todayDate(){
@@ -35,37 +34,28 @@ function Report() {
         return date
     }
 
-    function firstDate(){
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth()+1; 
-        var yyyy = today.getFullYear()-1;
-        if(dd<10) 
-        {
-            dd='0'+dd;
-        } 
-
-        if(mm<10) 
-        {
-            mm='0'+mm;
-        } 
-
-        var date = yyyy+'-'+mm+'-'+dd
-        return date
-    }
-
     const addClick = async (e) => {
         try {
             e.preventDefault()
-            const tempIngredients ={item_name:itemName, amount: +amount}
-            const temp = {...menu, price:+menu.price, category:[...categories, category], ingredient:[...ingredients, tempIngredients], available:available}
-            const response = await createPost(temp)
-            console.log(response)
-            
+            const startDateUnix = new Date(startDate).getTime()/1000;
+            const untilDateUnix = new Date(endDate).getTime()/1000;
+            const data = {from: startDateUnix, until: untilDateUnix, format:format, field: field, order: order}
 
-            if (response.status === 201) {
-                console.log("create", response)
+            console.log("data", data)
+            if (startDate === "" || endDate === ""){
+                alert("Please enter start and until date")
             }
+            else{
+                const response = await reportStock(data)
+                console.log(response)
+                
+
+                if (response.status === 201) {
+                
+                    console.log("create", response)
+                }
+            }
+            
         } catch (error) {
             // if (error.status === 422){
             //     alert("422")
@@ -74,29 +64,6 @@ function Report() {
         }
       }
 
-
-    const handleChangeInput = (e) => {
-        const name = e.target.name
-        const value = e.target.value
-        setMenu((oldValue) => ({ ...oldValue, [name]: value }))
-
-    }
-    const handleChangeCategoryInput = (e) =>{
-
-        e.preventDefault()
-        let test = [...categories, category]
-        setCategories(test)
-        setCategory("")
-    }
-
-    const handleChangeIngredientInput = (e) =>{
-        e.preventDefault()
-        const tempIngredientObject = {item_name: itemName, amount: +amount}
-        let test2 = [...ingredients, tempIngredientObject]
-        setIngredients(test2)
-        setAmount("")
-        setItemName("")
-    }
 
     return (
         <div className="v1_3">
@@ -126,23 +93,23 @@ function Report() {
            
             <span className="genReport">General / Sale Report </span>
             <span className="format">Format : </span>
-            <select className="formatInput" type='text' name='format' onChange={handleChangeInput}>
+            <select className="formatInput" type='text' name='format' onChange={(e) => setFormat(e.target.value)}>
                 <option value="excel">Excel</option>
                 <option value="csv">CSV</option>
             </select>
 
             <span className="from">Start Date : </span>
-            <input className="frominput" type="date" id="start" name="start"
-                    min={firstDate()} max={todayDate()} />
+            <input className="frominput" type="date" id="start" name="trip-start"
+                    min="2018-01-01" max={todayDate() } onChange={(e) => setStartDate(e.target.value)}/>
 
             <span className="until">Until Date : </span>
-            <input className="untilinput" type="date" id="until" name="until"
-                    min={firstDate()} max={todayDate()} />
+            <input className="untilinput" type="date" id="start" name="trip-start"
+                    min="2018-01-01" max={todayDate()} onChange={(e) => setEndDate(e.target.value)}/>
 
             <span className="stockReport">Stock Report </span>
 
             <span className="field">Field : </span>
-            <select className="fieldInput" type='text' name='field' onChange={handleChangeInput}>
+            <select className="fieldInput" type='text' name='field' onChange={(e) => setField(e.target.value)}>
                 <option value="name">Name</option>
                 <option value="amount">Amount</option>
                 <option value="importDate">Import Date</option>
@@ -150,7 +117,7 @@ function Report() {
             </select>
 
             <span className="order">Ordering : </span>
-            <select className="orderInput" type='text' name='order' onChange={handleChangeInput}>
+            <select className="orderInput" type='text' name='order' onChange={(e) => setOrder(e.target.value)}>
                 <option value="ascending">Ascending</option>
                 <option value="descending">Descending</option>
             </select>
@@ -158,7 +125,7 @@ function Report() {
             <div class="v18_47">
                 <div class="v18_52"></div>
                 <span class="v18_53">General Report</span>
-                <button class="v18_188">
+                <button class="v18_188" onClick={addClick}>
                     <span class="v18_190">Download</span>
                 </button>
             </div>
@@ -166,7 +133,7 @@ function Report() {
             <div class="v18_194">
                 <div class="v18_195"></div>
                 <span class="v18_196">Sale Report</span>
-                <button class="v18_198">
+                <button class="v18_198" onClick={addClick}>
                     <span class="v18_199">Download</span>
                 </button>
             </div>
@@ -174,7 +141,7 @@ function Report() {
             <div class="v18_203">
                 <div class="v18_204"></div>
                 <span class="v18_205">Stock Report</span>
-                <button class="v18_207">
+                <button class="v18_207" onClick={addClick}>
                     <span class="v18_208">Download</span>
                 </button>
             </div>
