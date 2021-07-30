@@ -364,7 +364,7 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
-    padding-top: 5px;
+    padding-top: 0px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -397,7 +397,7 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
-    padding-top: 5px;
+    padding-top: 0px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -430,7 +430,7 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
-    padding-top: 5px;
+    padding-top: 0px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
@@ -463,7 +463,7 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
-    padding-top: 5px;
+    padding-top: 0px;
     background: rgba(245,201,88,1);
     opacity: 1;
     position: absolute;
@@ -487,8 +487,21 @@
     opacity: 1;
     text-align: left;
   }
+
+  .latitude {
+    width: 345px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 248px;
+    left: 160px;
+    font-family: Marvel;
+    font-weight: Bold;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
   .v17_143 {
-    width: 957px;
+    width: 300px;
     height: 42px;
     color: rgba(0,0,0,1);
     font-family: Marvel;
@@ -496,18 +509,54 @@
     font-size: 25px;
     border:none;
     padding-left: 10px;
-    padding-top: 5px;
+    padding-top: 0px;
     background: rgba(228,228,228,1);
     opacity: 1;
     position: absolute;
     top: 248px;
-    left: 140px;
+    left: 280px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
   }
+
+  .longitude {
+    width: 345px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 248px;
+    left: 600px;
+    font-family: Marvel;
+    font-weight: Bold;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+  }
+
+  .longitudeInput {
+    width: 300px;
+    height: 42px;
+    color: rgba(0,0,0,1);
+    font-family: Marvel;
+    font-weight: Bold;
+    font-size: 25px;
+    border:none;
+    padding-left: 10px;
+    padding-top: 0px;
+    background: rgba(228,228,228,1);
+    opacity: 1;
+    position: absolute;
+    top: 248px;
+    left: 740px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+  }
+
   .v14_86 {
     width: 146px;
     color: rgba(0,0,0,1);
@@ -863,3 +912,5 @@
     color: #fff;
   }
   
+
+ 

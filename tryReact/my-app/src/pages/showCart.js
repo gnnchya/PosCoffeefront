@@ -23,6 +23,8 @@ function ShowCart() {
         }
     }
 
+    let map, infoWindow;
+
 
     const finish = async (e) => {
         try {
@@ -84,10 +86,26 @@ function ShowCart() {
 
             <div className="payment">
                 <span class="v17_136">Paid :</span><input class="v17_137" type='number' name='name' onChange={(e) => setPaid(e.target.value)}></input>
-                <span class="v17_138">Method :</span><input class="v17_139" type='text' name='name' onChange={(e) => setMethod(e.target.value)}></input>
-                <span class="v17_140">Type :</span><input class="v17_141" type='text' name='name' onChange={(e) => setType(e.target.value)}></input>
+                <span class="v17_138">Method :</span>
+                <select class="v17_139" type='text' name='method' onChange={(e) => setMethod(e.target.value)}>
+                    <option value="cash">Cash</option>
+                    <option value="mobile-banking">Mobile Banking</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                </select>
+                <span class="v17_140">Type :</span>
+                <select class="v17_141" type='text' name='type' onChange={(e) => setType(e.target.value)}>
+                    <option value="dine-in">Dine-in</option>
+                    <option value="takeaway">Takeaway</option>
+                    <option value="delivery">Delivery</option>
+                </select>
                 <span class="v17_144">Total Price :</span><input class="v17_145" type='number' name='name' onChange={(e) => setTotal(e.target.value)}></input>
-                <span class="v17_142">Destination :</span><input class="v17_143" type='number' name='name' onChange={(e) => setDestination(e.target.value)}></input>
+                <span class="v17_142">Destination :</span>
+                <span class="latitude">Latitude :</span>
+                <input class="v17_143" type='number' name='latitude' onChange={(e) => setDestination(e.target.value)}></input>
+
+                <span class="longitude">Longitude :</span>
+                <input class="longitudeInput" type='number' name='longitude' onChange={(e) => setDestination(e.target.value)}></input>
 
 
                 <Link to={{pathname:`/changeBill/${id}` ,state:data}}><div class="v14_81">
