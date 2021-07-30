@@ -28,11 +28,11 @@ function ShowCart() {
         try {
             e.preventDefault()
             const data = {paid: paid, method:method, type: type, latitude: 1, longitude: 2}
-            const response = await FinishCart(data)
+            const response = await FinishCart("c3ok6a2mvdvh8i865ta0",data)
             console.log(response)
             
 
-            if (response.status === 201) {
+            if (response.status === 200) {
                 console.log("create", response)
                 alert("created")
             }
